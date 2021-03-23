@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Наталия Смагина](https://up.htmlacademy.ru/adaptive/22/user/201570).
-* Наставник: `[Сергей Максименко]`(https://htmlacademy.ru/profile/id248863).
+* Наставник: [Сергей Максименко](https://htmlacademy.ru/profile/id248863).
 
 ---
 
