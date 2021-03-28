@@ -41,11 +41,11 @@
       <h1 class="visually-hidden">Приложение Pink</h1>
       <div class="block-intro">
         <h2 class="block-intro__preview">Взгляните на жизнь иначе!</h2>
-        <button class="block-intro__download" type="button"><span class="visually-hidden">Скачать приложение</span></button>
+        <a href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
         <div class="block-intro__socials">
-          <img class="socials__apple-logo" src="img/apple-logo.svg" width="47" height="56" alt="Apple">
-          <img class="socials__android-logo" src="img/android-logo.svg" width="43" height="47" alt="Android">
-          <img class="socials__microsoft-logo" src="img/microsoft-logo.svg" width="44" height="41" alt="Microsoft">
+          <a href="#"><img class="socials__apple-logo" src="img/apple-logo.svg" width="47" height="56" alt="Apple"></a>
+          <a href="#"><img class="socials__android-logo" src="img/android-logo.svg" width="43" height="47" alt="Android"></a>
+          <a href="#"><img class="socials__microsoft-logo" src="img/microsoft-logo.svg" width="44" height="41" alt="Microsoft"></a>
         </div>
         <small class="socials__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
       </div>
@@ -77,65 +77,64 @@
             <h2 class="reviews__title visually-hidden">Отзывы</h2>
             <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
-              <div class="reviews__author-info">
-                <h3 class="reviews__author-name">Николай Петров</h3>
-                <p class="reviews__text"><q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q></p>
-              </div>
+                <div class="reviews__author-info">
+                  <h3 class="reviews__author-name">Николай Петров</h3>
+                  <p class="reviews__text"><q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q></p>
+                </div>
               </blockquote>
             </div>
-            <div class="reviews__list">
+            <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
-              <div class="reviews__author-info">
-                <h3 class="reviews__author-name">Иван Иванов</h3>
-                <p class="reviews__text"><q>Отличные фотографии!</q></p>
-              </div>
+                <div class="reviews__author-info">
+                  <h3 class="reviews__author-name">Иван Иванов</h3>
+                  <p class="reviews__text"><q>Отличные фотографии!</q></p>
+                </div>
               </blockquote>
             </div>
-            <div class="reviews__list">
+            <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
-              <div class="reviews__author-info">
-                <h3 class="reviews__author-name">Алексей Семенов</h3>
-                <p class="reviews__text"><q>С этим приложением мир обретает новые цвета!</q></p>
-              </div>
+                <div class="reviews__author-info">
+                  <h3 class="reviews__author-name">Алексей Семенов</h3>
+                  <p class="reviews__text"><q>С этим приложением мир обретает новые цвета!</q></p>
+                </div>
               </blockquote>
             </div>
           </div>
-          <p class="reviews__toggles">
+          <p class="reviews__slider">
             <button class="slider__toggle slider__toggle--current" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
             <button class="slider__toggle" type="button">3</button>
           </p>
         </article>
 
-        <article class="table-block">
-          <table>
-
-            <tr>
-              <th></th>
-              <td>База</td>
-              <td>Стандарт</td>
-              <td>Анлим</td>
+        <article class="table__block">
+          <table class="table__rates">
+            <tr class="rates__row">
+              <td class="row__data-empty"></td>
+              <td class="row__data-base">База</td>
+              <td class="row__data-standart">Стандарт</td>
+              <td class="row__data-anlim">Анлим</td>
             </tr>
-            <tr>
-              <td>Розовый фильтр</td>
-              <td>1.1</td>
-              <td>1.2</td>
-              <td>1.3</td>
+            <tr class="rates__row">
+              <td class="row__data-filter">Розовый фильтр</td>
+              <td class="row__data">1.1</td>
+              <td class="row__data">1.2</td>
+              <td class="row__data">1.3</td>
             </tr>
-            <tr>
-              <td>Смайлики</td>
-              <td>2.1</td>
-              <td>2.2</td>
-              <td>2.3</td>
+            <tr class="rates__row">
+              <td class="row__data-smile">Смайлики</td>
+              <td class="row__data">2.1</td>
+              <td class="row__data">2.2</td>
+              <td class="row__data">2.3</td>
             </tr>
-            <tr>
-              <td>Комментарии</td>
-              <td>3.1</td>
-              <td>3.2</td>
-              <td>3.3</td>
+            <tr class="rates__row">
+              <td class="row__data-comment">Комментарии</td>
+              <td class="row__data">3.1</td>
+              <td class="row__data">3.2</td>
+              <td class="row__data">3.3</td>
             </tr>
           </table>
-          <p class="table__toggles">
+          <p class="table__toggles table__slider">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle slider__toggle--current" type="button">2</button>
             <button class="slider__toggle" type="button">3</button>
@@ -145,18 +144,18 @@
         <article class="contacts">
           <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
           <div>
-            <h3 class="contacts-phone__title">Звоните:</h3>
-            <a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <h3 class="contacts__subtitle">Звоните:</h3>
+            <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </div>
           <div>
-            <h3 class="contacts-mail__title">Пишите:</h3>
-            <a class="contacts__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <h3 class="contacts__subtitle">Пишите:</h3>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div>
-            <h3 class="contacts-phone__title">Приеззжайте в гости:</h3>
-            <p class="contacts__phone">ул. Большая Конюшенная, 19/8</p>
+            <h3 class="contacts__subtitle">Приеззжайте в гости:</h3>
+            <p class="contacts__link">ул. Большая Конюшенная, 19/8</p>
           </div>
-          <div class="contacts-map">
+          <div class="contacts__map">
             Карта
           </div>
         </article>
@@ -166,20 +165,20 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <a class="footer-link__logo">
+          <a class="logo__link">
             <img src="img/logotype-blue-tablet.svg" width="145" height="40" alt="Pink">
           </a>
         </div>
         <div class="page-footer__social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">Твиттер</a>
+              <a class="item__link item__link--twitter" href="#">Твиттер</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+              <a class="item__link item__link--facebook" href="#">Фейсбук</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Ютуб</a>
+              <a class="item__link item__link--youtube" href="#">Ютуб</a>
             </li>
           </ul>
         </div>
