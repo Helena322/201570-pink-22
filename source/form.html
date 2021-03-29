@@ -46,49 +46,69 @@
           <form action="https://echo.htmlacademy.ru/courses" method="post">
             <fieldset class="user-name name">
               <legend class="name__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</legend>
-              <label>Фамилия:<input type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
-              <br>
-              <label>Имя:<input type="text" name="name" placeholder="Введите ваше имя *" required></label>
-              <br>
-              <label>Отчество:<input type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
+              <div class="name__box">
+                <label>Фамилия:<input type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
+              </div>
+              <div class="name__box">
+                <label>Имя:<input type="text" name="name" placeholder="Введите ваше имя *" required></label>
+              </div>
+              <div class="name__box">
+                <label>Отчество:<input type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
+              </div>
             </fieldset>
 
             <fieldset class="user-checkbox checkbox">
               <legend class="checkbox__title">Ваши безбашенные достижения в путешествии</legend>
-              <label><input type="checkbox" name="shark" checked>Сделал селфи с акулой</label>
-              <br>
-              <label><input type="checkbox" name="beach" checked>Обгорел на пляже</label>
-              <br>
-              <label><input type="checkbox" name="сhuck">Видел Чака Норриса</label>
-              <br>
-              <label><input type="checkbox" name="souvenirs">Накупил сувениров</label>
-              <br>
-              <label><input type="checkbox" name="tower" checked>Удержал башню</label>
-              <br>
-              <label><input type="checkbox" name="hotel">Разгромил отель</label>
+              <div class="checkbox__box">
+                <label><input type="checkbox" name="shark" checked>Сделал селфи с акулой</label>
+              </div>
+              <div class="checkbox__box">
+                <label><input type="checkbox" name="beach" checked>Обгорел на пляже</label>
+              </div>
+              <div class="checkbox__box">
+                <label><input type="checkbox" name="сhuck">Видел Чака Норриса</label>
+              </div>
+              <div class="checkbox__box">
+                <label><input type="checkbox" name="souvenirs">Накупил сувениров</label>
+              </div>
+              <div class="checkbox__box">
+                <label><input type="checkbox" name="tower" checked>Удержал башню</label>
+              </div>
+              <div class="checkbox__box">
+                <label><input type="checkbox" name="hotel">Разгромил отель</label>
+              </div>
             </fieldset>
 
             <fieldset class="user-contacts contacts">
-              <label><input type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
-              <br>
-              <label><input type="email" name="email" placeholder="Введите почту *" required></label>
+              <div class="contacts__box">
+                <label><input type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
+              </div>
+              <div class="contacts__box">
+                <label><input type="email" name="email" placeholder="Введите почту *" required></label>
+              </div>
             </fieldset>
 
             <fieldset class="user-radio radio">
               <legend class="radio__title">С каким приложением путешествовали?</legend>
-              <label><input type="radio" name="ios">Pink для iOS</label>
-              <br>
+              <div class="radio__box">
+                <label><input type="radio" name="ios">Pink для iOS</label>
+              </div>
               <label><input type="radio" name="android">Pink на Android</label>
-              <br>
-              <label><input type="radio" name="windows">Windows Phone</label>
+              <div class="radio__box">
+                <label><input type="radio" name="windows">Windows Phone</label>
+              </div>
             </fieldset>
 
             <fieldset class="user-emotion emotion">
-              <legend class="emotion__title">опишите свои эмоции</legend>
-              <textarea name="emotion" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <div class="emotion__box">
+                <legend class="emotion__title">опишите свои эмоции</legend>
+                <textarea name="emotion" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </div>
             </fieldset>
 
-            <input type="submit" value="отправить форму">
+            <div class="user_submit">
+              <input type="submit" value="отправить форму">
+            </div>
 
             <small>* — обязательные поля</small>
           </form>
