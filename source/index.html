@@ -2,6 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="keywords" content="pink, app">
+    <meta name="description" content="Приложение Pink">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -52,9 +55,9 @@
           <a class="block-intro__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
         </div>
         <div class="block-intro__socials socials">
-          <a href="#"><img class="socials__logo socials__apple-logo" src="img/apple-logo.svg" width="47" height="56" alt="Apple"></a>
-          <a href="#"><img class="socials__logo socials__android-logo" src="img/android-logo.svg" width="43" height="47" alt="Android"></a>
-          <a href="#"><img class="socials__logo socials__microsoft-logo" src="img/microsoft-logo.svg" width="44" height="41" alt="Microsoft"></a>
+          <a class="socials__link" href="#"><img class="socials__logo socials__apple-logo" src="img/apple-logo.svg" width="47" height="56" alt="Apple"></a>
+          <a class="socials__link" href="#"><img class="socials__logo socials__android-logo" src="img/android-logo.svg" width="43" height="47" alt="Android"></a>
+          <a class="socials__link" href="#"><img class="socials__logo socials__microsoft-logo" src="img/microsoft-logo.svg" width="44" height="41" alt="Microsoft"></a>
         </div>
         <small class="block-intro__legend socials__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
       </div>
@@ -149,11 +152,13 @@
               <td class="row__data">3.3</td>
             </tr>
           </table>
-          <p class="table__toggles table__slider">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle slider__toggle--current" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <div class="table__button">
+            <p class="table__toggles table__slider">
+              <button class="slider__toggle" type="button">1</button>
+              <button class="slider__toggle slider__toggle--current" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+            </p>
+          </div>
         </article>
 
         <article class="contacts">
