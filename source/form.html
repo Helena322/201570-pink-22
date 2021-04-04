@@ -15,7 +15,7 @@
           <a class="page-header__logo">
             <img src="img/pink-logo.svg" width="74" height="23" alt="Pink">
           </a>
-          <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -54,63 +54,71 @@
               <legend class="user__legend name__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</legend>
               <div class="user__personal-data">
                 <div class="name__box">
-                  <label><span class="name__text">Фамилия:</span><input class="name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
+                  <label><span class="name__text text">Фамилия:</span><input class="text-input name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
                 </div>
                 <div class="name__box">
-                  <label><span class="name__text">Имя:</span><input class="name__input" type="text" name="name" placeholder="Введите ваше имя *" required></label>
+                  <label><span class="name__text text">Имя:</span><input class="text-input name__input" type="text" name="name" placeholder="Введите ваше имя *" required></label>
                 </div>
                 <div class="name__box">
-                  <label><span class="name__text">Отчество:</span><input class="name__input" type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
+                  <label><span class="name__text text">Отчество:</span><input class="text-input name__input" type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
                 </div>
               </div>
             </fieldset>
 
             <fieldset class="user-checkbox checkbox">
-              <legend class="checkbox__title">Ваши безбашенные достижения в путешествии</legend>
-              <div class="checkbox__box">
-                <label><input type="checkbox" name="shark" checked><span class="checkbox__selection">Сделал селфи с акулой</span></label>
-              </div>
-              <div class="checkbox__box">
-                <label><input type="checkbox" name="beach" checked><span class="checkbox__selection">Обгорел на пляже</span></label>
-              </div>
-              <div class="checkbox__box">
-                <label><input type="checkbox" name="сhuck"><span class="checkbox__selection">Видел Чака Норриса</span></label>
-              </div>
-              <div class="checkbox__box">
-                <label><input type="checkbox" name="souvenirs"><span class="checkbox__selection">Накупил сувениров</span></label>
-              </div>
-              <div class="checkbox__box">
-                <label><input type="checkbox" name="tower" checked><span class="checkbox__selection">Удержал башню</span></label>
-              </div>
-              <div class="checkbox__box">
-                <label><input type="checkbox" name="hotel"><span class="checkbox__selection">Разгромил отель</span></label>
+              <div>
+                <h3 class="checkbox__title">Ваши безбашенные достижения в путешествии</h3>
+                <div class="checkbox__box">
+                  <label><input type="checkbox" name="shark" checked><span class="checkbox__selection">Сделал селфи с акулой</span></label>
+                </div>
+                <div class="checkbox__box">
+                  <label><input type="checkbox" name="beach" checked><span class="checkbox__selection">Обгорел на пляже</span></label>
+                </div>
+                <div class="checkbox__box">
+                  <label><input type="checkbox" name="сhuck"><span class="checkbox__selection">Видел Чака Норриса</span></label>
+                </div>
+                <div class="checkbox__box">
+                  <label><input type="checkbox" name="souvenirs"><span class="checkbox__selection">Накупил сувениров</span></label>
+                </div>
+                <div class="checkbox__box">
+                  <label><input type="checkbox" name="tower" checked><span class="checkbox__selection">Удержал башню</span></label>
+                </div>
+                <div class="checkbox__box">
+                  <label><input type="checkbox" name="hotel"><span class="checkbox__selection">Разгромил отель</span></label>
+                </div>
               </div>
             </fieldset>
 
             <fieldset class="user-contacts contacts contacts__user">
-              <div class="contacts__box">
-                <label class="contacts__label"><span class="contacts__tel contacts__text">Номер телефона</span><input class="contacts__input" type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
-              </div>
-              <div class="contacts__box">
-                <label class="contacts__label"><span class="contacts__email contacts__text">Адрес почты</span><input class="contacts__input" type="email" name="email" placeholder="Введите почту *" required></label>
+              <div>
+                <div class="contacts__box">
+                  <label class="contacts__label"><span class="contacts__tel contacts__text">Номер телефона</span><input class="text-input contacts__input" type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
+                </div>
+                <div class="contacts__box">
+                  <label class="contacts__label"><span class="contacts__email contacts__text">Адрес почты</span><input class="text-input contacts__input" type="email" name="email" placeholder="Введите почту *" required></label>
+                </div>
               </div>
             </fieldset>
 
             <fieldset class="user-radio radio">
-              <legend class="radio__title">С каким приложением путешествовали?</legend>
-              <div class="radio__box">
-                <label class="radio__label"><input class="radio__input" type="radio" name="ios"><span class="radio__text">Pink для iOS</span></label>
-              </div>
-              <label class="radio__label"><input class="radio__input" type="radio" name="android"><span class="radio__text">Pink на Android</span></label>
-              <div class="radio__box">
-                <label class="radio__label"><input class="radio__input" type="radio" name="windows"><span class="radio__text">Windows Phone</span></label>
+              <div>
+              <h3 class="checkbox__title">С каким приложением путешествовали?</h3>
+                <div class="radio__box">
+                  <label class="radio__label"><input class="radio__input" type="radio" name="os" value="ios"><span class="radio__text">Pink для iOS</span></label>
+                </div>
+                <div class="radio__box">
+                  <label class="radio__label"><input class="radio__input" type="radio" name="os" value="android"><span class="radio__text">Pink на androi</span></label>
+                </div>
+                <div class="radio__box">
+                  <label class="radio__label"><input class="radio__input" type="radio" name="os" value="windows"><span class="radio__text">Windows Phone</span></label>
+                </div>
               </div>
             </fieldset>
 
             <fieldset class="user-emotion emotion">
               <div class="emotion__box">
-                <legend class="emotion__title">опишите свои эмоции</legend>
-                <textarea class="emotion__text" name="emotion" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <h3 class="emotion__title">опишите свои эмоции</h3>
+                <textarea class="emotion__text text-input" name="emotion" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </div>
             </fieldset>
 
