@@ -1,7 +1,6 @@
 .contacts {
   margin: 0;
   padding: 10px;
-  align-items: center;
   text-align: center;
 }
 
@@ -27,4 +26,41 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
+}
+
+.contacts__label {
+  align-items: center;
+  text-align: center;
+}
+
+.contacts__user {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.contacts__text {
+  color: #d22856;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.contacts__input {
+  min-width: 276px;
+  min-height: 59px;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+.contacts__input::placeholder {
+  color: #283645;
+  opacity: 1;
 }
