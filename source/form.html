@@ -11,10 +11,8 @@
   <body class="page__body">
     <header class="page-header">
       <nav class="main-nav">
-        <div class="main-nav__open">
-          <a class="page-header__logo">
-            <img src="img/pink-logo.svg" width="74" height="23" alt="Pink">
-          </a>
+        <div class="main-nav__top main-nav__open">
+          <span class="page-header__logo"></span>
           <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
@@ -46,12 +44,14 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Pink</h1>
-      <section class="form user">
-        <h2 class="form__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      <section class="form user user-box">
+        <div class="user-box__title">
+          <h2 class="user-box__text">Конкурс на самое безбашенное путешествие с Пинк</h2>
+        </div>
         <div class="user__box">
           <form action="https://echo.htmlacademy.ru/courses" method="post">
             <fieldset class="user-name name">
-              <legend class="user__legend name__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</legend>
+              <h3 class="user__legend name__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h3>
               <div class="user__personal-data">
                 <div class="name__box">
                   <label><span class="name__text text">Фамилия:</span><input class="text-input name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
