@@ -11,21 +11,19 @@
   <body class="page__body">
     <header class="page-header">
       <nav class="main-nav">
-        <div class="main-nav__open">
-          <a class="page-header__logo">
-            <img src="img/pink-logo.svg" width="74" height="23" alt="Pink">
-          </a>
+        <div class="main-nav__top main-nav__open">
+          <span class="page-header__logo"></span>
           <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a class="site-list__link site-list__index" href="index.html">
+              <a class="site-list__link site-list__index" href="#">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link site-list__catalog" href="#.html">
+              <a class="site-list__link site-list__catalog" href="catalog.html">
                 Фотографии
               </a>
             </li>
@@ -46,7 +44,9 @@
 
     <main class="page-main user-box">
       <h1 class="visually-hidden">Приложение Pink</h1>
-      <h2 class="user-box__title">Фотографии пользователей</h2>
+      <div class="user-box__title">
+        <h2 class="user-box__text">Фотографии пользователей</h2>
+      </div>
       <section class="photo user">
         <h3 class="user__legend">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h3>
         <article class="photo__post post">
@@ -174,20 +174,22 @@
         </article>
         <article class="filter">
           <h4 class="filter__legend user__legend">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h4>
-          <div class="filter__box">
-            <img src="img/photo-7-mobile.png" width="280" height="374" alt="Фотография фильтра">
-            <div class="filter__icon icon">
-              <button class="icon__toggle icon__toggle--current" type="button"><img src="img/crop.svg" width="44" height="44" alt="Обрезака"></button>
-              <input class="icon__range" type="range" min="0" max="100">
-              <button class="icon__toggle" type="button"><img src="img/fill.svg" width="48" height="43" alt="Заливка"></button>
-              <input class="icon__range" type="range" min="0" max="100">
-              <button class="icon__toggle" type="button"><img src="img/contrast.svg" width="32" height="32" alt="Контраст"></button>
-              <input class="icon__range" type="range" min="0" max="100">
+          <div class="filter__container">
+            <div class="filter__box">
+              <img src="img/photo-7-mobile.png" width="280" height="374" alt="Фотография фильтра">
+              <div class="filter__icon icon">
+                <button class="icon__toggle icon__toggle--current" type="button"><img src="img/crop.svg" width="44" height="44" alt="Обрезака"></button>
+                <input class="icon__range" type="range" min="0" max="100">
+                <button class="icon__toggle" type="button"><img src="img/fill.svg" width="48" height="43" alt="Заливка"></button>
+                <input class="icon__range" type="range" min="0" max="100">
+                <button class="icon__toggle" type="button"><img src="img/contrast.svg" width="32" height="32" alt="Контраст"></button>
+                <input class="icon__range" type="range" min="0" max="100">
+              </div>
             </div>
-          </div>
-          <div class="filter__button button">
-            <button class="button__send button-post send" type="button">Запостить</button>
-            <button class="button__repeal button-post repeal" type="button">Отмена</button>
+            <div class="filter__button button">
+              <button class="button__send button-post send" type="button">Запостить</button>
+              <button class="button__repeal button-post repeal" type="button">Отмена</button>
+            </div>
           </div>
         </article>
       </section>

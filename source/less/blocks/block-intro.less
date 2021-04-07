@@ -1,10 +1,8 @@
 .block-intro {
-  background: #1d2631;
+  background: @background-fone;
   color: white;
-  margin: 0;
-  padding: 20px;
-  align-items: center;
   text-align: center;
+  margin: 0;
 }
 
 .block-intro__box {
@@ -14,26 +12,34 @@
   margin: 0;
 }
 
-.block-intro__box h2 {
+.block-intro__preview {
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
-  margin: 20px;
-  padding: 30px 0 30px 0;
+  margin: 0;
+  padding: 30px 0;
   box-sizing: border-box;
 }
 
+.block-intro__link {
+  display: inline-block;
+}
+
 .block-intro__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 55px;
   color: white;
-  border: white solid 2px;
-  border-radius: 5px;
+  border: white solid 3px;
+  border-radius: 29px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
-  margin-top: 20px;
-  padding: 20px;
   text-decoration: none;
+  padding: 0;
 }
 
 .block-intro__legend {
@@ -42,6 +48,17 @@
   line-height: 24px;
   margin: 10px;
   padding: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+.block-intro__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: @background-fone;
+  min-height: 271px;
   align-items: center;
   text-align: center;
 }

@@ -1,16 +1,25 @@
 .information {
-  color: #283645;
+  color: @dark-blue;
   margin: 0;
-  padding: 10px;
+}
+
+.information__title {
+  height: 205px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
 }
 
 .information-block {
-  background: #f2f2f2;
+  background: @light-gray;
 }
 
 .information__list {
   color: black;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .information__item {
@@ -18,18 +27,20 @@
   text-align: center;
 }
 
-.information__item h3 {
+.information__item-title {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
 }
 
-.information__item p {
+.information__item-description {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
 }
 
 .information__text {
@@ -38,4 +49,9 @@
   line-height: 120%;
   align-items: center;
   text-align: center;
+  margin: 0;
+}
+
+.information__text:first-child {
+  margin-bottom: 50px;
 }

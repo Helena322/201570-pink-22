@@ -1,6 +1,5 @@
 .contacts {
   margin: 0;
-  padding: 10px;
   text-align: center;
 }
 
@@ -22,10 +21,11 @@
 }
 
 .contacts__link {
-  color: #d22856;
+  color: @pink;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
+  text-decoration: none;
 }
 
 .contacts__label {
@@ -40,7 +40,7 @@
 }
 
 .contacts__text {
-  color: #d22856;
+  color: @pink;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
@@ -50,7 +50,7 @@
 .contacts__input {
   min-width: 276px;
   min-height: 59px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid @border-color;
   border-radius: 1px;
   display: flex;
   flex-wrap: wrap;
@@ -61,6 +61,6 @@
 }
 
 .contacts__input::placeholder {
-  color: #283645;
+  color: @dark-blue;
   opacity: 1;
 }
