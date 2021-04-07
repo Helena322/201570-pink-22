@@ -9,7 +9,6 @@
 @mobile-width-only: 320px;
 @tablet-width: 660px;
 @desktop-width: 1200px;
-
 @import "global/fonts.less";
 @import "blocks/page.less";
 @import "blocks/page-header.less";
@@ -48,30 +47,29 @@
 
 @media (min-width: @tablet-width) {
 
-  .page,
-  .page-header,
+  .page-header {
+    min-width: 660px;
+  }
+  .page-header {
+    min-width: 660px;
+  }
   .main-nav {
     min-width: 660px;
   }
-
   .main-nav__top {
     height: 110px;
   }
-
   .page-header__logo {
     width: 145px;
     height: 40px;
     background: no-repeat;
     background-image: url("../../img/logotype-white-tablet.svg");
-
   }
-
   .block-intro__bottom,
   .block-intro__box {
     background-image: none;
     background: none;
   }
-
   .block-intro {
     box-sizing: border-box;
     display: grid;
