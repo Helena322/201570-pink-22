@@ -5,6 +5,7 @@
 @border-color: #e5e5e5;
 @background-fone: #1d2631;
 @button-green: #2aab6d;
+@background-glassy: rgba(0, 0, 0, 0.3);
 
 @mobile-width-only: 320px;
 @tablet-width: 660px;
@@ -44,16 +45,11 @@
 @import "blocks/like.less";
 @import "blocks/icon.less";
 @import "blocks/filter.less";
+@import "blocks/clock.less";
 
 @media (min-width: @tablet-width) {
-  .page {
-    min-width: 660px;
-  }
-
-  .page-header {
-    min-width: 660px;
-  }
-
+  .page,
+  .page-header,
   .main-nav {
     min-width: 660px;
   }
@@ -69,8 +65,15 @@
     background-repeat: no-repeat;
   }
 
+  .information__list,
+  .block-intro__box {
+    order: 1;
+  }
+
   .block-intro__bottom {
+    justify-content: space-around;
     background: none;
+    order: 0;
   }
 
   .block-intro__bottom,
@@ -87,5 +90,93 @@
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
+  }
+
+  .information__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .information__list {
+    justify-content: center;
+  }
+
+  .clock,
+  .contacts__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-footer {
+    min-height: auto;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page,
+  .page-header,
+  .main-nav {
+    min-width: 1200px;
+  }
+
+  .site-list__item {
+    display: inline-block;
+    box-shadow: none;
+  }
+
+  .page-header__logo {
+    width: 150px;
+    height: 40px;
+    background-image: url("../../img/logotype-white-desktop.svg");
+    background-repeat: no-repeat;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: @background-glassy;
+  }
+
+  .table__button,
+  .main-nav__dropdown {
+    display: none;
+  }
+
+  .main-nav__list {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-nav__top {
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .block-intro {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+  }
+
+  .information__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .information__list,
+  .information__iphone {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
   }
 }
