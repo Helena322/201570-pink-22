@@ -162,6 +162,20 @@
   .user__send {
     order: 2;
   }
+
+  .photo__container,
+  .filter__container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter__block,
+  .filter__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -169,6 +183,13 @@
   .page-header,
   .main-nav {
     min-width: 1200px;
+  }
+
+  .post-day__info {
+    margin: 0 100px;
+  }
+  .photo__container {
+    padding: 0 100px;
   }
 
   .site-list__item {
@@ -266,5 +287,25 @@
 
   .user__send {
     grid-area: send;
+  }
+
+  .photo__container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .filter__container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 35% 65%;
+    margin: 0 100px;
+  }
+
+  .filter__block,
+  .filter__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
