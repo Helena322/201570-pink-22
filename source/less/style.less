@@ -116,6 +116,52 @@
     justify-content: space-around;
     align-items: center;
   }
+
+  .user__container {
+    border: 2px solid @border-color;
+    border-radius: 1px;
+  }
+
+  .user-radio,
+  .user-checkbox {
+    background: white;
+  }
+
+  .user__send {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .user__name {
+    border: none;
+  }
+
+  .checkbox__container,
+  .radio__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-name,
+  .user-radio {
+    order: 0;
+  }
+
+  .user-contacts {
+    order: 1;
+  }
+
+  .user-checkbox,
+  .user-emotion,
+  .user__send {
+    order: 2;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -178,5 +224,47 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+  }
+
+  .user__box {
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .user__form {
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+      "name radio"
+      "contacts contacts"
+      "checkbox checkbox"
+      "emotion emotion"
+      "send send";
+  }
+
+  .user-name {
+    grid-area: name;
+  }
+
+  .user-radio {
+    grid-area: radio;
+  }
+
+  .user-contacts {
+    grid-area: contacts;
+  }
+
+  .user-checkbox {
+    grid-area: checkbox;
+  }
+
+  .user-emotion {
+    grid-area: emotion;
+  }
+
+  .user__send {
+    grid-area: send;
   }
 }
