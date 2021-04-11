@@ -49,10 +49,10 @@
       </div>
       <section class="photo user">
         <h3 class="user__legend">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h3>
-        <article class="photo__post post">
+        <article class="photo__post post post-day">
           <div class="post__box">
             <img src="img/panorama-tablet.png" width="320" height="137" alt="Фотография">
-            <div class="post__information">
+            <div class="post__information post-day__info">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Анна</h4>
                 <time class="autor__post-time" datetime="2018-11-27T03:00">(5 минут назад)</time>
@@ -68,7 +68,7 @@
             </div>
           </div>
         </article>
-        <article class="post photo__post">
+        <article class="post photo__post photo__container">
           <div class="post__box">
             <img src="img/photo-1-mobile.png" width="280" height="180" alt="Фотография">
             <div class="post__information">
@@ -177,18 +177,26 @@
           <div class="filter__container">
             <div class="filter__box">
               <img src="img/photo-7-mobile.png" width="280" height="374" alt="Фотография фильтра">
-              <div class="filter__icon icon">
-                <button class="icon__toggle icon__toggle--current" type="button"><img src="img/crop.svg" width="44" height="44" alt="Обрезака"></button>
-                <input class="icon__range" type="range" min="0" max="100">
-                <button class="icon__toggle" type="button"><img src="img/fill.svg" width="48" height="43" alt="Заливка"></button>
-                <input class="icon__range" type="range" min="0" max="100">
-                <button class="icon__toggle" type="button"><img src="img/contrast.svg" width="32" height="32" alt="Контраст"></button>
-                <input class="icon__range" type="range" min="0" max="100">
-              </div>
             </div>
-            <div class="filter__button button">
-              <button class="button__send button-post send" type="button">Запостить</button>
-              <button class="button__repeal button-post repeal" type="button">Отмена</button>
+            <div class="filter__block">
+              <div class="filter__icon icon">
+                <span>
+                  <button class="icon__toggle icon__toggle--current" type="button"><img src="img/crop.svg" width="44" height="44" alt="Обрезака"></button>
+                  <input class="icon__range" type="range" min="0" max="100">
+                </span>
+                <span>
+                  <button class="icon__toggle" type="button"><img src="img/fill.svg" width="48" height="43" alt="Заливка"></button>
+                  <input class="icon__range" type="range" min="0" max="100">
+                </span>
+                <span>
+                  <button class="icon__toggle" type="button"><img src="img/contrast.svg" width="32" height="32" alt="Контраст"></button>
+                  <input class="icon__range" type="range" min="0" max="100">
+                </span>
+              </div>
+              <div class="filter__button button">
+                <button class="button__send button-post send" type="button">Запостить</button>
+                <button class="button__repeal button-post repeal" type="button">Отмена</button>
+              </div>
             </div>
           </div>
         </article>
