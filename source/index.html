@@ -10,10 +10,10 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__top main-nav__open">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__top">
           <span class="page-header__logo"></span>
-          <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -46,14 +46,11 @@
       <h1 class="visually-hidden">Приложение Pink</h1>
       <div class="block-intro">
         <div class="block-intro__box">
-          <h2 class="block-intro__preview">Взгляните на жизнь иначе!</h2>
-          <div class="block-intro__phone phone">
-            <img class="phone__hand" src="img/phone.png" width="320" height="286">
-            <img class="phone__screen" src="img/screen.png" width="111" height="197">
-          </div>
+          <h2 class="block-intro__preview visually-hidden">Взгляните на жизнь иначе!</h2>
+          <div class="block-intro__phone phone"></div>
         </div>
         <div class="block-intro__bottom">
-          <h2 class="visually-hidden">Взгляните на жизнь иначе!</h2>
+          <h2 class="block-intro__preview block-intro__preview-display">Взгляните на жизнь иначе!</h2>
           <div class="block-intro__link">
             <a class="block-intro__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
           </div>
@@ -89,9 +86,8 @@
             </ul>
             <div class="information__iphone iphone">
               <img class="iphone__phone" src="img/iphone-3.png" width="157" height="320">
-              <!--<img class="iphone__screen-1" src="img/iphone-screen-1.png" width="136" height="245">
-              <img class="iphone__screen-2" src="img/iphone-screen-2.png" width="136" height="245">
-              <img class="iphone__screen-3 visually-hidden" src="img/iphone-screen-3.png" width="136" height="245">-->
+              <!--<img class="iphone__phone" src="img/iphone-3.png" width="157" height="320">
+              <img class="iphone__phone" src="img/iphone-3.png" width="157" height="320">-->
             </div>
           </div>
         </article>
@@ -138,9 +134,9 @@
               </blockquote>
             </div>
             <p class="reviews__slider slider">
-              <button class="slider__toggle slider__toggle--current" type="button">1</button>
-              <button class="slider__toggle" type="button">2</button>
-              <button class="slider__toggle" type="button">3</button>
+              <button class="table__slider-toggle slider__toggle slider__toggle--current" type="button"><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/></svg></button>
+              <button class="table__slider-toggle slider__toggle" type="button"><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/></svg></button>
+              <button class="table__slider-toggle slider__toggle" type="button"><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/></svg></button>
             </p>
           </div>
         </article>
@@ -174,9 +170,9 @@
           </table>
           <div class="table__button">
             <p class="table__toggles table__slider">
-              <button class="slider__toggle" type="button">1</button>
-              <button class="slider__toggle slider__toggle--current" type="button">2</button>
-              <button class="slider__toggle" type="button">3</button>
+              <button class="table__slider-toggle slider__toggle slider__toggle--current" type="button"><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/></svg></button>
+              <button class="table__slider-toggle slider__toggle" type="button"><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/></svg></button>
+              <button class="table__slider-toggle slider__toggle" type="button"><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/></svg></button>
             </p>
           </div>
         </article>
@@ -232,5 +228,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__dropdown');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
