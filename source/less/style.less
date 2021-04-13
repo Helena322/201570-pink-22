@@ -253,12 +253,6 @@
     background: white;
   }
 
-  .user__send {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    order: 2;
-  }
-
   .user__name {
     border: none;
   }
@@ -328,6 +322,9 @@
 
   .user__send {
     grid-area: send;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    order: 2;
   }
 
   .data-title {
@@ -486,8 +483,7 @@
     display: grid;
     gap: 50px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "call letter guest";
+    grid-template-areas: "call letter guest";
   }
 
   .call {
