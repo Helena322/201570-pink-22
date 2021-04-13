@@ -256,6 +256,7 @@
   .user__send {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    order: 2;
   }
 
   .user__name {
@@ -269,23 +270,13 @@
     align-items: flex-start;
   }
 
-  .user__form {
-    display: flex;
-    flex-direction: column;
-  }
-
   .user-name,
   .user-radio {
     order: 0;
   }
 
-  .user-contacts {
-    order: 1;
-  }
-
   .user-checkbox,
-  .user-emotion,
-  .user__send {
+  .user-emotion {
     order: 2;
   }
 
@@ -324,6 +315,7 @@
 
   .user-contacts {
     grid-area: contacts;
+    order: 1;
   }
 
   .user-checkbox {
