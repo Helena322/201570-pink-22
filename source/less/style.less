@@ -6,6 +6,7 @@
 @background-fone: #1d2631;
 @button-green: #2aab6d;
 @background-glassy: rgba(0, 0, 0, 0.3);
+@light-border: rgba(40, 54, 69, 0.1);
 
 @mobile-width-only: 320px;
 @tablet-width: 660px;
@@ -87,6 +88,10 @@
     background-image: url("../../img/phone.png");
     background-repeat: no-repeat;
     background-position: bottom;
+  }
+
+  .block-intro {
+    margin-top: -65px;
   }
 }
 
@@ -182,12 +187,14 @@
     min-height: 729px;
     background-image: url("../../img/phone-tablet.png"), url("../../img/back-tablet.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom center;
     margin: 0;
+    margin-top: -110px;
   }
 
   .information__container {
     display: grid;
+    min-height: 350px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -195,10 +202,35 @@
     justify-content: center;
   }
 
-  .clock,
-  .contacts__container {
+  .information__iphone {
+    background-image: url("../../img/iphone-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .clock {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contacts__container {
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+      "call letter"
+      "guest guest";
+  }
+
+  .call {
+    grid-area: call;
+  }
+
+  .letter {
+    grid-area: letter;
+  }
+
+  .guest {
+    grid-area: guest;
   }
 
   .page-footer {
@@ -270,6 +302,60 @@
     flex-direction: column;
     justify-content: space-around;
   }
+
+  .user__form {
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+      "name radio"
+      "contacts contacts"
+      "checkbox checkbox"
+      "emotion emotion"
+      "send send";
+  }
+
+  .user-name {
+    grid-area: name;
+  }
+
+  .user-radio {
+    grid-area: radio;
+  }
+
+  .user-contacts {
+    grid-area: contacts;
+  }
+
+  .user-checkbox {
+    grid-area: checkbox;
+  }
+
+  .user-emotion {
+    grid-area: emotion;
+  }
+
+  .user__send {
+    grid-area: send;
+  }
+
+  .data-title {
+    width: 152px;
+    height: 75px;
+  }
+
+  .data__box {
+    width: 152px;
+    height: 45px;
+  }
+
+  .data__box-text {
+    display: none;
+  }
+
+  .data__box-yes,
+  .data__box-no {
+    background-position: center;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -337,12 +423,14 @@
 
   .block-intro {
     width: 100%;
+    height: 838px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-image: url("../../img/phone-desktop.png"), url("../../img/back-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom center;
     margin: 0;
+    margin-top: -110px;
   }
 
   .block-intro__preview-display {
@@ -353,14 +441,46 @@
 
   .information__container {
     display: grid;
+    min-height: 500px;
     grid-template-columns: 1fr;
   }
 
-  .information__list,
-  .information__iphone {
+  .information__list {
     display: grid;
+    height: 150px;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+  }
+
+  .information__iphone {
+    display: grid;
+    height: 350px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  .iphone__block:first-child {
+    height: 350px;
+    width: 160px;
+    background-image: url("../../img/iphone-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .iphone__block:nth-child(2) {
+    height: 350px;
+    width: 160px;
+    background-image: url("../../img/iphone-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .iphone__block:last-child {
+    height: 350px;
+    width: 160px;
+    background-image: url("../../img/iphone-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .user__box {
@@ -370,39 +490,43 @@
     margin: 0 auto;
   }
 
-  .user__form {
+  .contacts__container {
     display: grid;
     gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "name radio"
-      "contacts contacts"
-      "checkbox checkbox"
-      "emotion emotion"
-      "send send";
+      "call letter guest";
   }
 
-  .user-name {
-    grid-area: name;
+  .call {
+    grid-area: call;
   }
 
-  .user-radio {
-    grid-area: radio;
+  .letter {
+    grid-area: letter;
   }
 
-  .user-contacts {
-    grid-area: contacts;
+  .guest {
+    grid-area: guest;
   }
 
-  .user-checkbox {
-    grid-area: checkbox;
+  .data-title {
+    width: 233px;
+    height: 59px;
   }
 
-  .user-emotion {
-    grid-area: emotion;
+  .data__box {
+    width: 233px;
+    height: 59px;
   }
 
-  .user__send {
-    grid-area: send;
+  .data__box-text {
+    display: none;
+  }
+
+  .data__box-yes,
+  .data__box-no {
+    background-position: center;
   }
 
   .filter__container {

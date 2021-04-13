@@ -1,10 +1,17 @@
 .table__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: @light-gray;
+  align-items: center;
+  text-align: center;
 }
 
 .table__rates {
   display: flex;
   flex-direction: column;
+  table-layout: fixed;
+  width: 1104px;
   align-items: center;
   text-align: center;
 }
@@ -18,7 +25,31 @@
   margin: 0;
 }
 
-.table__slider-toggle {
-  background: none;
+.table__slider {
+  display: flex;
+  height: 12px;
+  align-items: center;
+  text-align: center;
   border: none;
+}
+
+.table__slider-toggle {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  background-image: url("../../img/slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+
+  &:focus,
+  &:visited,
+  &:active {
+    width: 12px;
+    height: 12px;
+    background-image: url("../../img/current-slider.svg");
+    border: none;
+    outline: none;
+  }
 }
