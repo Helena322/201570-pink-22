@@ -10,10 +10,10 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__top main-nav__open">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__top">
           <span class="page-header__logo"></span>
-          <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -46,14 +46,11 @@
       <h1 class="visually-hidden">Приложение Pink</h1>
       <div class="block-intro">
         <div class="block-intro__box">
-          <h2 class="block-intro__preview">Взгляните на жизнь иначе!</h2>
-          <div class="block-intro__phone phone">
-            <img class="phone__hand" src="img/phone.png" width="320" height="286">
-            <img class="phone__screen" src="img/screen.png" width="111" height="197">
-          </div>
+          <h2 class="block-intro__preview visually-hidden">Взгляните на жизнь иначе!</h2>
+          <div class="block-intro__phone phone"></div>
         </div>
         <div class="block-intro__bottom">
-          <h2 class="visually-hidden">Взгляните на жизнь иначе!</h2>
+          <h2 class="block-intro__preview block-intro__preview-display">Взгляните на жизнь иначе!</h2>
           <div class="block-intro__link">
             <a class="block-intro__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
           </div>
@@ -87,16 +84,11 @@
                 <p class="information__item-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
             </ul>
-            <div class="information__iphone iphone">
-              <img class="iphone__phone" src="img/iphone-3.png" width="157" height="320">
-              <!--<img class="iphone__screen-1" src="img/iphone-screen-1.png" width="136" height="245">
-              <img class="iphone__screen-2" src="img/iphone-screen-2.png" width="136" height="245">
-              <img class="iphone__screen-3 visually-hidden" src="img/iphone-screen-3.png" width="136" height="245">-->
-            </div>
+            <div class="information__iphone iphone"></div>
           </div>
         </article>
 
-        <article class="clock visually-hidden">
+        <article class="clock">
           <div class="clock__img">
             <span class="clock__image"><svg width="238" height="276" viewBox="0 0 238 276" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M211.314 81.6277L215.587 77.3408C221.752 71.1663 222.878 62.1925 218.086 57.4017C213.294 52.6109 204.334 53.7227 198.176 59.8971L193.871 64.208C176.746 50.2779 156.074 41.4187 134.187 38.6304V30.9603H140.305C149.019 30.9603 156.151 23.994 156.151 15.4842C156.151 6.97427 149.019 0 140.305 0H97.7208C89.0075 0 81.8755 6.96627 81.8755 15.4842C81.8755 24.002 89.0075 30.9603 97.7208 30.9603H103.839V38.6304C77.6967 41.9933 53.4093 53.9522 34.7872 72.6308C16.1652 91.3093 4.26218 115.651 0.945904 141.835C-2.37038 168.02 3.08771 194.566 16.4638 217.309C29.8399 240.052 50.377 257.704 74.8528 267.496C99.3286 277.288 126.358 278.665 151.7 271.412C177.042 264.16 199.263 248.687 214.875 227.421C230.488 206.156 238.609 180.302 237.964 153.915C237.32 127.529 227.946 102.103 211.314 81.6277ZM119.013 244.947C101.61 244.947 84.5984 239.779 70.1286 230.097C55.6589 220.414 44.3813 206.652 37.7219 190.551C31.0625 174.45 29.3205 156.733 32.7162 139.64C36.1119 122.547 44.4927 106.847 56.7989 94.5241C69.105 82.2015 84.7837 73.81 101.852 70.411C118.921 67.012 136.613 68.7581 152.69 75.4285C168.768 82.0989 182.509 93.3939 192.176 107.885C201.844 122.377 207.003 139.413 207.001 156.841C206.999 180.209 197.728 202.619 181.227 219.142C164.726 235.665 142.348 244.947 119.013 244.947Z" fill="#DEDEDE"/><circle cx="119" cy="156" r="93" stroke="#D22856" stroke-width="16"/></svg></span>
           </div>
@@ -119,7 +111,7 @@
                 </div>
               </blockquote>
             </div>
-            <div class="reviews__list slider__list">
+            <!--<div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
                 <div class="reviews__author-info">
                   <h3 class="reviews__author-name author-name">Иван Иванов</h3>
@@ -136,11 +128,11 @@
                   <p class="reviews__age visually-hidden">25 лет, водитель трамвая</p>
                 </div>
               </blockquote>
-            </div>
+            </div>-->
             <p class="reviews__slider slider">
-              <button class="slider__toggle slider__toggle--current" type="button">1</button>
-              <button class="slider__toggle" type="button">2</button>
-              <button class="slider__toggle" type="button">3</button>
+              <button class="reviews__slider-toggle slider__toggle slider__toggle--current" type="button"></button>
+              <button class="reviews__slider-toggle slider__toggle" type="button"></button>
+              <button class="reviews__slider-toggle slider__toggle" type="button"></button>
             </p>
           </div>
         </article>
@@ -148,35 +140,35 @@
         <article class="table table__block">
           <table class="table__rates rates">
             <tr class="rates__row row data">
-              <td class="row__data-empty"></td>
-              <td class="row__data-base data-title">База<p>1,99 USD</p></td>
-              <td class="row__data-standart data-title row__data-hit">Стандарт<p>3,99 USD</p></td>
-              <td class="row__data-anlim data-title">Анлим<p>9,99 USD</p></td>
+              <td class="row__data-empty data-empty data-title data__first"></td>
+              <td class="row__data-base data-title">База<p class="data-title__text">1,99 USD</p></td>
+              <td class="row__data-standart data-title data-title__hit row__data-hit data__box-visible">Стандарт<p class="data-title__text data__hit">3,99 USD</p></td>
+              <td class="row__data-anlim data-title">Анлим<p class="data-title__text">9,99 USD</p></td>
             </tr>
-            <tr class="rates__row row">
-              <td class="row__data-filter row-title">Розовый фильтр</td>
-              <td class="row__data">1.1</td>
-              <td class="row__data">1.2</td>
-              <td class="row__data">1.3</td>
+            <tr class="rates__row row data">
+              <td class="row__data-filter row-title data__box data__first">Розовый фильтр</td>
+              <td class="row__data data__box data__box-yes"><p class="data__box-text">Розовый фильтр</p></td>
+              <td class="row__data data__box data__box-visible data__box-yes"><p class="data__box-text">Розовый фильтр</p></td>
+              <td class="row__data data__box data__box-yes"><p class="data__box-text">Розовый фильтр</p></td>
             </tr>
-            <tr class="rates__row row">
-              <td class="row__data-smile row-title">Смайлики</td>
-              <td class="row__data">2.1</td>
-              <td class="row__data">2.2</td>
-              <td class="row__data">2.3</td>
+            <tr class="rates__row row data">
+              <td class="row__data-smile row-title data__box data__first">Смайлики</td>
+              <td class="row__data data__box data__box-no"><p class="data__box-text">Смайлики</p></td>
+              <td class="row__data data__box data__box-visible data__box-yes"><p class="data__box-text">Смайлики</p></td>
+              <td class="row__data data__box data__box-yes"><p class="data__box-text">Смайлики</p></td>
             </tr>
-            <tr class="rates__row row">
-              <td class="row__data-comment row-title">Комментарии</td>
-              <td class="row__data">3.1</td>
-              <td class="row__data">3.2</td>
-              <td class="row__data">3.3</td>
+            <tr class="rates__row row data">
+              <td class="row__data-comment row-title data__box data__first">Комментарии</td>
+              <td class="row__data data__box data__box-no"><p class="data__box-text">Комментарии</p></td>
+              <td class="row__data data__box data__box-visible data__box-no"><p class="data__box-text">Комментарии</p></td>
+              <td class="row__data data__box data__box-yes"><p class="data__box-text">Комментарии</p></td>
             </tr>
           </table>
           <div class="table__button">
             <p class="table__toggles table__slider">
-              <button class="slider__toggle" type="button">1</button>
-              <button class="slider__toggle slider__toggle--current" type="button">2</button>
-              <button class="slider__toggle" type="button">3</button>
+              <button class="table__slider-toggle slider__toggle" type="button"></button>
+              <button class="table__slider-toggle slider__toggle slider__toggle--current" type="button"></button>
+              <button class="table__slider-toggle slider__toggle" type="button"></button>
             </p>
           </div>
         </article>
@@ -184,18 +176,18 @@
         <article class="contacts">
           <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
           <div class="contacts__container">
-            <div class="contacts__block">
+            <div class="contacts__block call">
               <h3 class="contacts__subtitle">Звоните:</h3>
               <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
             </div>
-            <div class="contacts__block">
+            <div class="contacts__block letter">
               <h3 class="contacts__subtitle">Пишите:</h3>
               <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </div>
-          </div>
-          <div class="contacts__block">
-            <h3 class="contacts__subtitle">Приеззжайте в гости:</h3>
-            <p class="contacts__link">ул. Большая Конюшенная, 19/8</p>
+            <div class="contacts__block guest">
+              <h3 class="contacts__subtitle">Приезжайте в гости:</h3>
+              <p class="contacts__link">ул. Большая Конюшенная, 19/8</p>
+            </div>
           </div>
           <div class="contacts__map">
             Карта
@@ -225,12 +217,28 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="copyright__text">Разработано</p>
             <img src="img/html_academy.svg" width="27" height="34" alt="Academy">
           </a>
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__dropdown');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
