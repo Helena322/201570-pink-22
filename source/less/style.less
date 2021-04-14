@@ -108,6 +108,24 @@
   .data__box-visible {
     display: table-cell;
   }
+
+  .information__iphone {
+    height: 286px;
+    background-image: url("../../img/iphone3-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    order: 0;
+  }
+
+  .block-intro,
+  .information__title,
+  .information__container,
+  .reviews, .table__block,
+  .contacts,
+  .page-footer__wrapper,
+  .clock {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -175,6 +193,9 @@
 
   .information__list,
   .block-intro__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     order: 1;
   }
 
@@ -217,14 +238,12 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .information__list {
-    justify-content: center;
-  }
-
   .information__iphone {
-    background-image: url("../../img/iphone-3.png");
+    height: 485px;
+    background-image: url("../../img/iphone3-tablet.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
+    order: 0;
   }
 
   .clock {
@@ -482,45 +501,44 @@
     grid-template-columns: 1fr;
   }
 
+  .information__iphone {
+    display: none;
+  }
+
   .information__list {
     display: grid;
-    height: 150px;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
 
-  .information__iphone {
-    display: grid;
-    height: 350px;
-    background-image: url("../../img/iphone-fone.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-  }
+  .information__item {
+    padding-top: 420px;
+    position: relative;
 
-  .iphone__block:first-child {
-    height: 350px;
-    width: 160px;
-    background-image: url("../../img/iphone-3.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 186px;
+      height: 380px;
+    }
 
-  .iphone__block:nth-child(2) {
-    height: 350px;
-    width: 160px;
-    background-image: url("../../img/iphone-3.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+    &:first-child {
+      background-image: url("../../img/iphone1.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
 
-  .iphone__block:last-child {
-    height: 350px;
-    width: 160px;
-    background-image: url("../../img/iphone-3.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    &:nth-child(2) {
+      background-image: url("../../img/iphone2.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
+    &:last-child {
+      background-image: url("../../img/iphone3.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
   }
 
   .user__box {
