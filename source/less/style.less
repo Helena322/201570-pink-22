@@ -47,6 +47,7 @@
 @import "blocks/icon.less";
 @import "blocks/filter.less";
 @import "blocks/clock.less";
+@import "blocks/slider.less";
 
 @media (min-width: @mobile-width-only) {
   .main-nav--closed .main-nav__dropdown::before {
@@ -92,6 +93,20 @@
 
   .block-intro {
     margin-top: -65px;
+  }
+
+  .data__first {
+    display: none;
+  }
+
+  .data-title,
+  .data__box {
+    display: none;
+  }
+
+  .data-title__hit,
+  .data__box-visible {
+    display: table-cell;
   }
 }
 
@@ -192,6 +207,10 @@
     margin-top: -110px;
   }
 
+  .data__first {
+    display: table-cell;
+  }
+
   .information__container {
     display: grid;
     min-height: 350px;
@@ -239,8 +258,9 @@
 
   .page-footer__wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
   }
 
   .user__container {
@@ -327,14 +347,20 @@
     order: 2;
   }
 
+  .table__rates {
+    width: 608px;
+  }
+
   .data-title {
     width: 152px;
     height: 75px;
+    display: table-cell;
   }
 
   .data__box {
     width: 152px;
     height: 45px;
+    display: table-cell;
   }
 
   .data__box-text {
@@ -344,6 +370,17 @@
   .data__box-yes,
   .data__box-no {
     background-position: center;
+  }
+
+  .block-intro,
+  .information__title,
+  .information__container,
+  .reviews,
+  .table__block,
+  .contacts,
+  .page-footer__wrapper,
+  .clock {
+    padding: 0 20px;
   }
 }
 
@@ -428,6 +465,17 @@
     line-height: 68px;
   }
 
+  .block-intro,
+  .information-title,
+  .information__container,
+  .reviews,
+  .table__block,
+  .contacts,
+  .page-footer__wrapper,
+  .clock {
+    padding: 0 130px;
+  }
+
   .information__container {
     display: grid;
     min-height: 500px;
@@ -444,6 +492,9 @@
   .information__iphone {
     display: grid;
     height: 350px;
+    background-image: url("../../img/iphone-fone.png");
+    background-repeat: no-repeat;
+    background-position: top center;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
@@ -498,9 +549,13 @@
     grid-area: guest;
   }
 
+  .table__rates {
+    width: 940px;
+  }
+
   .data-title {
     width: 233px;
-    height: 59px;
+    height: 94px;
   }
 
   .data__box {
@@ -529,5 +584,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+
+  .clock {
+  background-color: @light-gray;
   }
 }
