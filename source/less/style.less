@@ -117,15 +117,33 @@
     order: 0;
   }
 
+  .contacts {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .block-intro,
   .information__title,
   .information__container,
   .reviews,
   .table__block,
-  .contacts,
   .page-footer__wrapper,
   .clock {
     padding: 0 20px;
+  }
+
+  .user-box__title {
+    height: 240px;
+    margin-top: -66px;
+  }
+
+  .user-contacts__title {
+    display: none;
+  }
+
+  .user-box__text {
+    padding-top: 100px;
   }
 }
 
@@ -283,6 +301,23 @@
     padding: 0 20px;
   }
 
+  .user-contacts__title {
+    display: block;
+  }
+
+  .user-box__title {
+    margin-top: -110px;
+    height: 440px;
+    background-image: url(../../img/back-tablet.png);
+    background-position: top;
+  }
+
+  .user-box__text {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
   .user__container {
     border: 2px solid @border-color;
     border-radius: 1px;
@@ -329,35 +364,23 @@
   }
 
   .user__form {
-    display: grid;
-    gap: 50px;
-    grid-template-areas:
-      "name radio"
-      "contacts contacts"
-      "checkbox checkbox"
-      "emotion emotion"
-      "send send";
+    display: flex;
+    flex-direction: column;
   }
 
-  .user-name {
-    grid-area: name;
-  }
-
+  .user-name,
   .user-radio {
-    grid-area: radio;
+    order: 0;
   }
 
   .user-contacts {
-    grid-area: contacts;
     order: 1;
   }
 
-  .user-checkbox {
-    grid-area: checkbox;
-  }
-
-  .user-emotion {
-    grid-area: emotion;
+  .user-checkbox,
+  .user-emotion,
+  .user__send {
+    order: 2;
   }
 
   .user__send {
@@ -397,10 +420,126 @@
   .information__container,
   .reviews,
   .table__block,
-  .contacts,
   .page-footer__wrapper,
   .clock {
     padding: 0 20px;
+  }
+
+  .user__legend {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .user__personal-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .name__label {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .name__input {
+    width: 100%;
+  }
+
+  .name__text {
+    margin-right: 15px;
+  }
+
+  .user-contacts__container {
+    padding: 20px 60px;
+  }
+
+  .user__form {
+    padding: 0 20px;
+  }
+
+  .radio__container {
+    display: flex;
+    padding-left: 50px;
+  }
+
+  .user-radio__container {
+    height: 295px;
+  }
+
+  .contacts__desktop {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts,
+  .contacts__box {
+    padding: 0;
+  }
+
+  .contacts__input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contacts__label {
+    width: 100%;
+    position: relative;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 55px;
+      width: 55px;
+      right: 0;
+      top: 0;
+      border: 2px solid @border-color;
+      background-color: @border-color;
+      z-index: 5;
+    }
+  }
+
+  .contacts-label__tel::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 19px;
+    right: 20px;
+    top: 20px;
+    background-image: url(../../img/phone-icon.svg);
+    background-repeat: no-repeat;
+    z-index: 15;
+  }
+
+  .contacts-label__mail::after {
+    content: "";
+    position: absolute;
+    height: 13px;
+    width: 18px;
+    right: 20px;
+    top: 23px;
+    background-image: url(../../img/mail-icon.svg);
+    background-repeat: no-repeat;
+    z-index: 15;
+  }
+
+  .checkbox__desktop {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding -left: 30px;
+  }
+
+  .emotion__text {
+    width: 496px;
+    height: 189px;
+  }
+
+  .emotion__container {
+    height: 289px;
   }
 }
 
@@ -607,5 +746,203 @@
 
   .clock {
     background-color: @light-gray;
+  }
+
+  .user__form {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 445px 445px;
+    grid-template-areas:
+      "name radio"
+      "contacts contacts"
+      "checkbox checkbox"
+      "emotion emotion"
+      "send send";
+  }
+
+  .user-name {
+    height: 300px;
+    grid-area: name;
+    margin: 0;
+    padding: 0;
+  }
+
+  .user-radio {
+    grid-area: radio;
+    padding: 0;
+  }
+
+  .user-contacts {
+    grid-area: contacts;
+    padding: 0;
+    order: 1;
+  }
+
+  .user-checkbox {
+    grid-area: checkbox;
+    padding: 0;
+  }
+
+  .user-emotion {
+    grid-area: emotion;
+    padding: 0;
+  }
+
+  .user-radio__container {
+    height: 297px;
+  }
+
+  .user-box__title {
+    margin-top: -110px;
+    height: 400px;
+    background-image: url(../../img/back-desktop.jpg);
+    background-position: top;
+  }
+
+  .user-box__text {
+    padding: 184px 130px 0 130px;
+  }
+
+  .user__legend {
+    margin-bottom: 30px;
+    padding: 94px 130px 0 130px;
+  }
+
+  .user__personal-data {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .user-contacts__container {
+    padding: 20px 60px;
+  }
+
+  .contacts__input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contacts__text {
+    margin: 0;
+  }
+
+  .contacts__box {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contacts__label {
+    width: 100%;
+    position: relative;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 55px;
+      width: 55px;
+      right: 0;
+      top: 0;
+      border: 2px solid @border-color;
+      background-color: @border-color;
+      z-index: 5;
+    }
+  }
+
+  .contacts-label__tel::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 19px;
+    right: 20px;
+    top: 20px;
+    background-image: url(../../img/phone-icon.svg);
+    background-repeat: no-repeat;
+    z-index: 15;
+  }
+
+  .contacts-label__mail::after {
+    content: "";
+    position: absolute;
+    height: 13px;
+    width: 18px;
+    right: 20px;
+    top: 23px;
+    background-image: url(../../img/mail-icon.svg);
+    background-repeat: no-repeat;
+    z-index: 15;
+  }
+
+  .name__box {
+    padding: 0;
+  }
+
+  .name__title-second {
+    display: inline;
+    padding: 0;
+  }
+
+  .contacts__desktop {
+    display: grid;
+    grid-template-columns: 371px 371px;
+    justify-content: space-between;
+  }
+
+  .checkbox__container {
+    height: 228px;
+    align-items: center;
+  }
+
+  .checkbox__desktop {
+    display: grid;
+    height: 140px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+    grid-auto-flow: column;
+    justify-items: flex-start;
+    padding: 0;
+  }
+
+  .checkbox__selection {
+    padding-left: 70px;
+  }
+
+  .emotion__box {
+    height: 170px;
+  }
+
+  .emotion__text {
+    width: 816px;
+    height: 124px;
+  }
+
+  .user__submit {
+    margin: 0;
+  }
+
+  .user__send {
+    padding: 0;
+  }
+
+  .user__submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .small__block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .small__text-desktop {
+    display: inline;
   }
 }
