@@ -1,6 +1,7 @@
 .contacts {
   margin: 0;
   text-align: center;
+  padding-top: 30px;
 }
 
 .contacts__title {
@@ -29,8 +30,19 @@
 }
 
 .contacts__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.contacts__box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  padding-bottom: 30px;
 }
 
 .contacts__text {
@@ -39,10 +51,12 @@
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .contacts__input {
-  min-width: 276px;
+  width: 100%;
   min-height: 59px;
   border: 2px solid @border-color;
   border-radius: 1px;
@@ -52,6 +66,8 @@
   font-size: 18px;
   line-height: 30px;
   margin: 0 auto;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 
 .contacts__input::placeholder {

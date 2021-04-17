@@ -10,10 +10,10 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__top main-nav__open">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__top">
           <span class="page-header__logo"></span>
-          <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -231,5 +231,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__dropdown');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
   </body>
 </html>

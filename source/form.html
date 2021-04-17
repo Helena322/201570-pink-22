@@ -10,10 +10,10 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__top main-nav__open">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__top">
           <span class="page-header__logo"></span>
-          <button class="main-nav__dropdown" type="button"><img src="img/open-menu-btn.svg" alt="Открыть меню"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -48,20 +48,20 @@
         <div class="user-box__title">
           <h2 class="user-box__text">Конкурс на самое безбашенное путешествие с Пинк</h2>
         </div>
-        <h2 class="user__legend name__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+        <h2 class="user__legend name__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="user__legend name__title name__title-second">Пожалуйста, заполните форму ниже:</span></h2>
         <div class="user__box">
           <form class="user__form" action="https://echo.htmlacademy.ru/courses" method="post">
             <div class="user-name name">
               <fieldset class="user__container user__name">
                 <div class="user__personal-data">
                   <div class="name__box">
-                    <label><span class="name__text text">Фамилия:</span><input class="text-input name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
+                    <label class="name__label"><span class="name__text text">Фамилия:</span><input class="text-input name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
                   </div>
                   <div class="name__box">
-                    <label><span class="name__text text">Имя:</span><input class="text-input name__input" type="text" name="name" placeholder="Введите ваше имя *" required></label>
+                    <label class="name__label"><span class="name__text text">Имя:</span><input class="text-input name__input" type="text" name="name" placeholder="Введите ваше имя *" required></label>
                     </div>
                   <div class="name__box">
-                    <label><span class="name__text text">Отчество:</span><input class="text-input name__input" type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
+                    <label class="name__label"><span class="name__text text">Отчество:</span><input class="text-input name__input" type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
                   </div>
                 </div>
               </fieldset>
@@ -70,60 +70,71 @@
             <div class="user-checkbox checkbox">
               <fieldset class="user__container checkbox__container">
                 <legend class="checkbox__title">Ваши безбашенные достижения в путешествии</legend>
-                <div class="checkbox__box">
-                  <label><input type="checkbox" name="shark" checked><span class="checkbox__selection">Сделал селфи с акулой</span></label>
-                </div>
-                <div class="checkbox__box">
-                  <label><input type="checkbox" name="beach" checked><span class="checkbox__selection">Обгорел на пляже</span></label>
-                </div>
-                <div class="checkbox__box">
-                  <label><input type="checkbox" name="сhuck"><span class="checkbox__selection">Видел Чака Норриса</span></label>
-                </div>
-                <div class="checkbox__box">
-                  <label><input type="checkbox" name="souvenirs"><span class="checkbox__selection">Накупил сувениров</span></label>
-                </div>
-                <div class="checkbox__box">
-                  <label><input type="checkbox" name="tower" checked><span class="checkbox__selection">Удержал башню</span></label>
-                </div>
-                <div class="checkbox__box">
-                  <label><input type="checkbox" name="hotel"><span class="checkbox__selection">Разгромил отель</span></label>
+                <div class="checkbox__desktop">
+                  <div class="checkbox__box">
+                    <input class="checkbox__input" type="checkbox" name="shark" id="shark" checked>
+                    <label for="shark" class="checkbox__label"><span class="checkbox__selection">Сделал селфи с акулой</span></label>
+                  </div>
+                  <div class="checkbox__box">
+                    <input class="checkbox__input" type="checkbox" name="beach" id="beach" checked>
+                    <label for="beach" class="checkbox__label"><span class="checkbox__selection">Обгорел на пляже</span></label>
+                  </div>
+                  <div class="checkbox__box">
+                    <input class="checkbox__input" type="checkbox" name="сhuck" id="сhuck">
+                    <label for="сhuck" class="checkbox__label"><span class="checkbox__selection">Видел Чака Норриса</span></label>
+                  </div>
+                  <div class="checkbox__box">
+                    <input class="checkbox__input" type="checkbox" name="souvenirs" id="souvenirs">
+                    <label for="souvenirs" class="checkbox__label"><span class="checkbox__selection">Накупил сувениров</span></label>
+                  </div>
+                  <div class="checkbox__box">
+                    <input class="checkbox__input" type="checkbox" name="tower" id="tower" checked>
+                    <label for="tower" class="checkbox__label"><span class="checkbox__selection">Удержал башню</span></label>
+                  </div>
+                  <div class="checkbox__box">
+                    <input class="checkbox__input" type="checkbox" name="hotel" id="hotel">
+                    <label for="hotel" class="checkbox__label"><span class="checkbox__selection">Разгромил отель</span></label>
+                  </div>
                 </div>
               </fieldset>
             </div>
 
             <div class="user-contacts contacts contacts__user">
-              <fieldset class="user__container">
+              <fieldset class="user__container user-contacts__container">
                 <legend class="user-contacts__title">контактная информация</legend>
-                <div>
+                <div class="contacts__desktop">
                   <div class="contacts__box">
-                    <label class="contacts__label"><span class="contacts__tel contacts__text">Номер телефона</span><input class="text-input contacts__input" type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
+                    <label class="contacts__label contacts-label__tel"><span class="contacts__tel contacts__text">Номер телефона</span><input class="text-input contacts__input" type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
                   </div>
                   <div class="contacts__box">
-                    <label class="contacts__label"><span class="contacts__email contacts__text">Адрес почты</span><input class="text-input contacts__input" type="email" name="email" placeholder="Введите почту *" required></label>
+                    <label class="contacts__label contacts-label__mail"><span class="contacts__email contacts__text">Адрес почты</span><input class="text-input contacts__input" type="email" name="email" placeholder="Введите почту *" required></label>
                   </div>
                 </div>
               </fieldset>
             </div>
 
             <div class="user-radio radio">
-              <fieldset class="user__container">
+              <fieldset class="user__container user-radio__container">
                 <legend class="checkbox__title">С каким приложением путешествовали?</legend>
                   <div class="radio__container">
                     <div class="radio__box">
-                      <label class="radio__label"><input class="radio__input" type="radio" name="os" value="ios"><span class="radio__text">Pink для iOS</span></label>
+                      <input class="radio__input" type="radio" name="os" id="ios" value="ios" checked>
+                      <label for="ios" class="radio__label"><span class="radio__text">Pink для iOS</span></label>
                     </div>
                     <div class="radio__box">
-                      <label class="radio__label"><input class="radio__input" type="radio" name="os" value="android"><span class="radio__text">Pink на androi</span></label>
+                      <input class="radio__input" type="radio" name="os" id="android" value="android">
+                      <label for="android" class="radio__label"><span class="radio__text">Pink на Android</span></label>
                     </div>
                     <div class="radio__box">
-                      <label class="radio__label"><input class="radio__input" type="radio" name="os" value="windows"><span class="radio__text">Windows Phone</span></label>
+                      <input class="radio__input" type="radio" name="os" id="windows" value="windows">
+                      <label for="windows" class="radio__label"><span class="radio__text">Windows Phone</span></label>
                     </div>
                   </div>
               </fieldset>
             </div>
 
             <div class="user-emotion emotion">
-              <fieldset class="user__container">
+              <fieldset class="user__container emotion__container">
                 <legend class="emotion__title">опишите свои эмоции</legend>
                 <div class="emotion__box">
                   <textarea class="emotion__text text-input" name="emotion" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
@@ -136,7 +147,7 @@
                 <input class="user__button" type="submit" value="отправить форму">
               </div>
               <div class="small__block">
-                <small class="small__text"><span class="small__star">*</span> — обязательные поля</small>
+                <small class="small__text"><span class="small__star">*</span> — обязательные <span class="small__text-desktop">для заполнения</span> поля</small>
               </div>
             </div>
           </form>
@@ -165,8 +176,8 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано:</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="copyright__text">Разработано</p>
             <img src="img/html_academy.svg" width="27" height="34" alt="Academy">
           </a>
         </div>
@@ -186,6 +197,23 @@
         <button class="modal__button">ок</button>
       </div>
     </section>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__dropdown');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
   </body>
 </html>
