@@ -4,11 +4,23 @@
 }
 
 .post__information {
+  position: relative;
   background: @light-gray;
   text-align: left;
+  margin: 0 20px;
+  padding: 25px 20px;
+}
+
+.post__photo {
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top center;
 }
 
 .post__like {
+  display: flex;
+  align-items: center;
   color: @pink;
   font-weight: normal;
   font-size: 12px;
@@ -19,4 +31,37 @@
 .post__like-number,
 .post__like-text {
   display: inline-block;
+}
+
+.post-day__photo {
+  position: relative;
+  height: 137px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../../img/panorama-tablet.png");
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    background-image: url("../../img/panorama-day.svg");
+    background-repeat: no-repeat;
+    z-index: 20;
+  }
+}
+
+.post-text,
+.post__like-text,
+.post__like-number {
+  margin: 0;
+  padding: 0;
+}
+
+.post__autor {
+  margin-bottom: 15px;
+}
+
+.post__box {
+  margin-bottom: 20px;
 }
