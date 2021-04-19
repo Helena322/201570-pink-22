@@ -385,8 +385,9 @@
 
   .photo__container {
     display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
   }
 
@@ -590,16 +591,16 @@
     height: 155px;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 20px 20px;
     margin: 0;
   }
 
   .post-day__info {
+
     margin: 0 20px;
   }
 
   .post__autor {
-    padding-top: 20px;
     margin: 0;
   }
 
@@ -638,18 +639,11 @@
 
   .post-day__photo {
     height: 509px;
-    background-image: url("../../img/panorama-tablet2.png");
-    background-size: cover;
   }
 
   .filter__container {
     flex-direction: row;
     justify-content: space-around;
-  }
-
-  .post-day__photo::after {
-    top: 60px;
-    right: 20px;
   }
 }
 
@@ -659,13 +653,15 @@
   }
 
   .post-day__info {
-    margin: 0 100px;
+    width: 900px;
+    margin: 0 auto;
   }
 
   .photo__container {
     display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 0 100px;
   }
 
@@ -1042,8 +1038,6 @@
 
   .post-day__photo {
     height: 509px;
-    background-image: url("../../img/panorama-desktop.png");
-    background-size: cover;
   }
 
   .filter__button {
@@ -1067,10 +1061,5 @@
   .icon__range {
     width: 288px;
     left: 100px;
-  }
-
-  .post-day__photo::after {
-    top: 55px;
-    right: 130px;
   }
 }
