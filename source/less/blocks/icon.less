@@ -1,4 +1,40 @@
 .icon__toggle {
   background: none;
   border: none;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.icon__box {
+  position: relative;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &:nth-child(1) {
+    background-image: url("../../img/crop.svg");
+  }
+
+  &:nth-child(2) {
+    background-image: url("../../img/fill.svg");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../../img/contrast.svg");
+  }
+}
+
+.icon__range {
+  min-width: 240px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.icon__hidden {
+  display: none;
 }
