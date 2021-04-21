@@ -79,8 +79,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 450px;
+    min-height: 450px;
     background-image: url("../../img/back-mobile.png");
+    background-size: cover;
   }
 
   .block-intro__phone {
@@ -123,14 +124,37 @@
     padding-right: 20px;
   }
 
-  .block-intro,
-  .information__title,
-  .information__container,
+  .information__title {
+    padding: 50px 20px;
+  }
+
+  .information__container {
+    padding-top: 50px;
+  }
+
+  .information__item {
+    margin-bottom: 30px;
+  }
+
+  .block-intro__bottom,
   .reviews,
   .table__block,
-  .page-footer__wrapper,
-  .clock {
+  .page-footer__wrapper {
     padding: 0 20px;
+  }
+
+  .block-intro__preview {
+    position: absolute;
+    line-height: 120%;
+    top: 90px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+  }
+
+  .clock,
+  .block-intro__preview-display {
+    display: none;
   }
 
   .user-box__title {
@@ -261,15 +285,28 @@
     order: 1;
   }
 
+  .block-intro__preview {
+    display: none;
+  }
+
   .block-intro__preview-display {
+    display: block;
+    position: relative;
+    top: 0;
     font-weight: 300;
     font-size: 40px;
     line-height: 120%;
+    margin-bottom: 50px;
+  }
+
+  .block-intro__link,
+  .block-intro__socials {
+    margin-bottom: 50px;
   }
 
   .block-intro__bottom {
-    justify-content: space-around;
     background-image: none;
+    padding-top: 100px;
     order: 0;
   }
 
@@ -278,12 +315,22 @@
     background-image: none;
   }
 
+  .page-main .block-intro__background {
+    position: relative;
+    min-height: 729px;
+    width: auto;
+    background-image: url("../../img/back-tablet.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
   .block-intro {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 729px;
-    background-image: url("../../img/phone-tablet.png"), url("../../img/back-tablet.png");
+    background-image: url("../../img/phone-tablet.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     margin: 0;
@@ -306,6 +353,10 @@
     background-repeat: no-repeat;
     background-position: top center;
     order: 0;
+  }
+
+  .information__item {
+    margin-bottom: 0;
   }
 
   .clock {
@@ -454,7 +505,6 @@
   }
 
   .block-intro,
-  .information__title,
   .information__container,
   .reviews,
   .table__block,
@@ -644,6 +694,10 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .block-intro__phone {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -711,12 +765,21 @@
     box-shadow: none;
   }
 
+  .page-main .block-intro__background {
+    position: relative;
+    min-height: 729px;
+    background-image: url("../../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
   .block-intro {
     width: 100%;
     height: 838px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-image: url("../../img/phone-desktop.png"), url("../../img/back-desktop.jpg");
+    background-image: url("../../img/phone-desktop.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     margin: 0;
@@ -724,6 +787,8 @@
   }
 
   .block-intro__preview-display {
+    display: block;
+    position: relative;
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
