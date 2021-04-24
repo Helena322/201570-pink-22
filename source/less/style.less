@@ -102,6 +102,13 @@
     background-image: url("../../img/phone.png");
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @media (min-resolution: 2dppx) {
+      width: 320px;
+      background-image: url("../../img/phone@2x.png");
+      background-position: top center;
+      background-size: cover;
+    }
   }
 
   .block-intro {
@@ -349,6 +356,12 @@
     background-position: bottom center;
     margin: 0;
     margin-top: -110px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone-tablet@2x.png");
+      background-position: bottom center;
+      background-size: 660px 545px;
+    }
   }
 
   .data__first {
@@ -367,6 +380,11 @@
     background-repeat: no-repeat;
     background-position: top center;
     order: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/iphone3-tablet@2x.png");
+      background-size: 268px 547px;
+    }
   }
 
   .information__item {
@@ -716,6 +734,10 @@
   .map__box {
     min-height: 374px;
   }
+
+  .clock__block {
+    padding-top: 50px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -806,6 +828,12 @@
     background-position: bottom center;
     margin: 0;
     margin-top: -110px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone-desktop@2x.png");
+      background-position: bottom 0% right 10%;
+      background-size: 1050px 645px;
+    }
   }
 
   .block-intro__preview-display {
@@ -871,6 +899,29 @@
       background-image: url("../../img/iphone3.png");
       background-repeat: no-repeat;
       background-position: top center;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &:first-child {
+        background-image: url("../../img/iphone1@2x.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 308px 490px;
+      }
+
+      &:nth-child(2) {
+        background-image: url("../../img/iphone2@2x.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 308px 490px;
+      }
+
+      &:last-child {
+        background-image: url("../../img/iphone3@2x.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 308px 490px;
+      }
     }
   }
 
