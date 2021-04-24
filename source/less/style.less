@@ -72,6 +72,12 @@
   }
 
   .block-intro__preview {
+    position: absolute;
+    line-height: 120%;
+    top: 90px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
     order: 0;
   }
 
@@ -79,16 +85,30 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 450px;
+    min-height: 450px;
     background-image: url("../../img/back-mobile.png");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-mobile@2x.png");
+    }
   }
 
   .block-intro__phone {
     position: relative;
     height: 286px;
+    width: 100%;
+    margin: 0 auto;
     background-image: url("../../img/phone.png");
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @media (min-resolution: 2dppx) {
+      width: 320px;
+      background-image: url("../../img/phone@2x.png");
+      background-position: top center;
+      background-size: cover;
+    }
   }
 
   .block-intro {
@@ -119,18 +139,34 @@
 
   .contacts {
     padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
-  .block-intro,
-  .information__title,
-  .information__container,
+  .contacts__container {
+    padding: 0 20px;
+  }
+
+  .information__title {
+    padding: 50px 20px;
+  }
+
+  .information__container {
+    padding-top: 50px;
+  }
+
+  .information__item {
+    margin-bottom: 30px;
+  }
+
+  .block-intro__bottom,
   .reviews,
   .table__block,
-  .page-footer__wrapper,
-  .clock {
+  .page-footer__wrapper {
     padding: 0 20px;
+  }
+
+  .clock,
+  .block-intro__preview-display {
+    display: none;
   }
 
   .user-box__title {
@@ -187,6 +223,10 @@
         background-image: url("../../img/photo-6-mobile.png");
       }
     }
+  }
+
+  .map__box {
+    min-height: 200px;
   }
 }
 
@@ -261,15 +301,29 @@
     order: 1;
   }
 
+  .block-intro__preview {
+    display: none;
+  }
+
   .block-intro__preview-display {
+    display: block;
+    position: relative;
+    top: 0;
     font-weight: 300;
     font-size: 40px;
     line-height: 120%;
+    margin-bottom: 50px;
+  }
+
+  .block-intro__link,
+  .block-intro__socials {
+    margin-bottom: 50px;
   }
 
   .block-intro__bottom {
-    justify-content: space-around;
+    background-color: transparent;
     background-image: none;
+    padding-top: 100px;
     order: 0;
   }
 
@@ -278,16 +332,36 @@
     background-image: none;
   }
 
+  .page-main .block-intro__background {
+    position: relative;
+    min-height: 729px;
+    width: auto;
+    background-image: url("../../img/back-tablet.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-tablet@2x.png");
+    }
+  }
+
   .block-intro {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 729px;
-    background-image: url("../../img/phone-tablet.png"), url("../../img/back-tablet.png");
+    background-image: url("../../img/phone-tablet.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     margin: 0;
     margin-top: -110px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone-tablet@2x.png");
+      background-position: bottom center;
+      background-size: 660px 545px;
+    }
   }
 
   .data__first {
@@ -306,6 +380,15 @@
     background-repeat: no-repeat;
     background-position: top center;
     order: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/iphone3-tablet@2x.png");
+      background-size: 268px 547px;
+    }
+  }
+
+  .information__item {
+    margin-bottom: 0;
   }
 
   .clock {
@@ -454,7 +537,6 @@
   }
 
   .block-intro,
-  .information__title,
   .information__container,
   .reviews,
   .table__block,
@@ -644,6 +726,18 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .block-intro__phone {
+    display: none;
+  }
+
+  .map__box {
+    min-height: 374px;
+  }
+
+  .clock__block {
+    padding-top: 50px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -711,19 +805,40 @@
     box-shadow: none;
   }
 
+  .page-main .block-intro__background {
+    position: relative;
+    min-height: 729px;
+    background-image: url("../../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+    }
+  }
+
   .block-intro {
     width: 100%;
     height: 838px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-image: url("../../img/phone-desktop.png"), url("../../img/back-desktop.jpg");
+    background-image: url("../../img/phone-desktop.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     margin: 0;
     margin-top: -110px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone-desktop@2x.png");
+      background-position: bottom 0% right 10%;
+      background-size: 1050px 645px;
+    }
   }
 
   .block-intro__preview-display {
+    display: block;
+    position: relative;
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
@@ -757,7 +872,8 @@
   }
 
   .information__item {
-    padding-top: 420px;
+    width: 280px;
+    padding-top: 310px;
     position: relative;
 
     &::before {
@@ -783,6 +899,29 @@
       background-image: url("../../img/iphone3.png");
       background-repeat: no-repeat;
       background-position: top center;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &:first-child {
+        background-image: url("../../img/iphone1@2x.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 308px 490px;
+      }
+
+      &:nth-child(2) {
+        background-image: url("../../img/iphone2@2x.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 308px 490px;
+      }
+
+      &:last-child {
+        background-image: url("../../img/iphone3@2x.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 308px 490px;
+      }
     }
   }
 
@@ -1060,5 +1199,9 @@
   .icon__range {
     width: 288px;
     left: 100px;
+  }
+
+  .map__box {
+    min-height: 502px;
   }
 }
