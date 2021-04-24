@@ -232,6 +232,12 @@
   .map__box {
     min-height: 200px;
   }
+
+  .page-header__logo-desktop,
+  .page-header__logo-tablet,
+  .logo__desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -745,6 +751,15 @@
   .clock__block {
     padding-top: 50px;
   }
+
+  .page-header__logo-desktop,
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -1213,5 +1228,16 @@
 
   .map__box {
     min-height: 502px;
+  }
+
+  .page-header__logo-mobile,
+  .page-header__logo-tablet,
+  .logo__mobile-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desktop,
+  .logo__desktop {
+    display: block;
   }
 }
