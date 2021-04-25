@@ -172,6 +172,10 @@
   .user-box__title {
     height: 240px;
     margin-top: -66px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-mobile@2x.png");
+    }
   }
 
   .user-contacts__title {
@@ -227,6 +231,12 @@
 
   .map__box {
     min-height: 200px;
+  }
+
+  .page-header__logo-desktop,
+  .page-header__logo-tablet,
+  .logo__desktop {
+    display: none;
   }
 }
 
@@ -289,7 +299,6 @@
     left: 20px;
     width: 145px;
     height: 40px;
-    background-image: url("../../img/logotype-white-tablet.svg");
     background-repeat: no-repeat;
   }
 
@@ -436,6 +445,10 @@
     height: 440px;
     background-image: url("../../img/back-tablet.png");
     background-position: top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-tablet@2x.png");
+    }
   }
 
   .user-box__text {
@@ -738,6 +751,15 @@
   .clock__block {
     padding-top: 50px;
   }
+
+  .page-header__logo-desktop,
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -779,7 +801,6 @@
     top: -5px;
     width: 150px;
     height: 40px;
-    background-image: url("../../img/logotype-white-desktop.svg");
     background-repeat: no-repeat;
   }
 
@@ -1033,6 +1054,10 @@
     height: 400px;
     background-image: url("../../img/back-desktop.jpg");
     background-position: top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+    }
   }
 
   .user-box__text {
@@ -1203,5 +1228,16 @@
 
   .map__box {
     min-height: 502px;
+  }
+
+  .page-header__logo-mobile,
+  .page-header__logo-tablet,
+  .logo__mobile-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desktop,
+  .logo__desktop {
+    display: block;
   }
 }
