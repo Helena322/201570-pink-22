@@ -691,7 +691,6 @@
   }
 
   .post-day__info {
-
     margin: 0 20px;
   }
 
@@ -732,7 +731,11 @@
   }
 
   .post-day__photo {
-    height: 509px;
+    min-height: 509px;
+
+    &::before {
+      margin-top: 60px;
+    }
   }
 
   .filter__container {
@@ -768,8 +771,8 @@
   }
 
   .post-day__info {
-    width: 900px;
-    margin: 0 auto;
+    min-width: 900px;
+    margin: 0 110px;
   }
 
   .photo__container {
@@ -1201,6 +1204,10 @@
 
   .post-day__photo {
     height: 509px;
+
+    &::before {
+      right: 130px;
+    }
   }
 
   .filter__button {
