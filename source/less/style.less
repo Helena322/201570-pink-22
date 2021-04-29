@@ -85,7 +85,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 450px;
+    min-height: 460px;
     background-image: url("../../img/back-mobile.png");
     background-size: cover;
 
@@ -130,7 +130,7 @@
   }
 
   .information__iphone {
-    height: 286px;
+    height: 280px;
     background-image: url("../../img/iphone3-mobile.png");
     background-repeat: no-repeat;
     background-position: top center;
@@ -138,26 +138,38 @@
   }
 
   .contacts {
-    padding-top: 30px;
+    padding-top: 43px;
   }
 
   .contacts__container {
-    padding: 0 20px;
+    padding: 35px 20px;
   }
 
   .information__title {
-    padding: 50px 20px;
+    padding: 42px 20px;
+    margin-bottom: 32px;
   }
 
   .information__container {
-    padding-top: 50px;
+    padding-top: 10px;
+  }
+
+  .information__item-title {
+    margin-bottom: 10px;
   }
 
   .information__item {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
   }
 
-  .block-intro__bottom,
+  .block-intro__bottom {
+    padding: 30px 20px;
+  }
+
   .reviews,
   .table__block,
   .page-footer__wrapper {
@@ -238,6 +250,10 @@
   .logo__desktop {
     display: none;
   }
+
+  .reviews__wrapper .reviews__slider-toggle {
+    display: none;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -260,6 +276,18 @@
 
   .page-header .main-nav--opened {
     background-color: @dark-blue;
+  }
+
+  .letter {
+    margin-bottom: 20px;
+  }
+
+  .call {
+    margin-bottom: 17px;
+  }
+
+  .reviews__age {
+    display: none;
   }
 }
 
@@ -302,7 +330,14 @@
     background-repeat: no-repeat;
   }
 
-  .information__list,
+  .information__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 52px 0 0 0;
+    order: 1;
+  }
+
   .block-intro__box {
     display: flex;
     flex-direction: column;
@@ -321,19 +356,48 @@
     font-weight: 300;
     font-size: 40px;
     line-height: 120%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    padding: 0 40px;
   }
 
-  .block-intro__link,
+  .block-intro__link {
+    margin-bottom: 40px;
+  }
+
   .block-intro__socials {
-    margin-bottom: 50px;
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .information__title {
+    padding: 47px 0 0 0;
+    margin-bottom: 35px;
+  }
+
+  .information__text {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 54px;
+    margin: 0;
+
+    &:last-child {
+      padding: 0 50px;
+    }
+  }
+
+  .block-intro__legend {
+    font-size: 18px;
   }
 
   .block-intro__bottom {
     background-color: transparent;
     background-image: none;
-    padding-top: 100px;
+    padding: 204px 0 0 0;
     order: 0;
+  }
+
+  .socials__link:nth-child(2) {
+    margin: 0 30px;
   }
 
   .block-intro__box,
@@ -365,6 +429,7 @@
     background-position: bottom center;
     margin: 0;
     margin-top: -110px;
+    padding: 0 9px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/phone-tablet@2x.png");
@@ -377,6 +442,10 @@
     display: table-cell;
   }
 
+  .information-block {
+    margin-bottom: 20px;
+  }
+
   .information__container {
     display: grid;
     min-height: 350px;
@@ -387,7 +456,7 @@
     height: 485px;
     background-image: url("../../img/iphone3-tablet.png");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top left 31%;
     order: 0;
 
     @media (min-resolution: 2dppx) {
@@ -397,17 +466,19 @@
   }
 
   .information__item {
-    margin-bottom: 0;
-  }
+    text-align: left;
+    margin-bottom: 18px;
+    padding-right: 10px;
 
-  .clock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
   }
 
   .contacts__container {
     display: grid;
-    gap: 50px;
+    grid-column-gap: 0;
+    grid-row-gap: 22px;
     grid-template-areas:
       "call letter"
       "guest guest";
@@ -432,7 +503,7 @@
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 0 20px;
   }
 
@@ -549,12 +620,18 @@
     background-position: center;
   }
 
-  .block-intro,
-  .information__container,
+  .block-intro__button {
+    width: 290px;
+    height: 49px;
+  }
+
+  .information__container {
+    padding: 0;
+  }
+
   .reviews,
   .table__block,
-  .page-footer__wrapper,
-  .clock {
+  .page-footer__wrapper {
     padding: 0 20px;
   }
 
@@ -752,7 +829,7 @@
   }
 
   .clock__block {
-    padding-top: 50px;
+    padding-top: 72px;
   }
 
   .page-header__logo-desktop,
@@ -760,8 +837,86 @@
     display: none;
   }
 
+  .reviews__age {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    order: 2;
+  }
+
+  .reviews__list {
+    margin: 0;
+  }
+
   .page-header__logo-tablet {
     display: block;
+  }
+
+  .reviews__author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+    padding: 0;
+    order: 0;
+  }
+
+  .reviews__author-name {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    order: 1;
+  }
+
+  .reviews {
+    margin-bottom: 53px;
+  }
+
+  .contacts {
+    padding-top: 10px;
+  }
+
+  .contacts__title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 54px;
+    padding: 0 50px;
+  }
+
+  .guest .contacts__link {
+    padding: 0 200px;
+  }
+
+  .page-footer {
+    padding-top: 17px;
+  }
+
+  .page-footer__copyright,
+  .page-footer__social,
+  .page-footer__logo {
+    margin: 0;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .clock__title {
+    padding-right: 150px;
+  }
+
+  .information__text {
+    margin: 0;
   }
 }
 
@@ -786,7 +941,7 @@
   .site-list__item {
     display: inline-block;
     box-shadow: none;
-    margin-left: 80px;
+    margin-left: 75px;
 
     &--active {
       border-bottom: 2px solid white;
@@ -825,7 +980,7 @@
   }
 
   .main-nav__top {
-    padding: 0 0 0 130px;
+    padding: 0 0 0 110px;
     box-shadow: none;
   }
 
@@ -844,14 +999,14 @@
 
   .block-intro {
     width: 100%;
-    height: 838px;
+    min-height: 853px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-image: url("../../img/phone-desktop.png");
     background-repeat: no-repeat;
-    background-position: bottom center;
-    margin: 0;
-    margin-top: -110px;
+    background-position: bottom right 5px;
+    margin: -110px 0 0 0;
+    padding: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/phone-desktop@2x.png");
@@ -866,17 +1021,85 @@
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
+    margin-bottom: 38px;
+    padding: 0 130px 0 90px;
   }
 
-  .block-intro,
+  .block-intro__link {
+    margin-bottom: 66px;
+    padding: 0 40px 0 0;
+  }
+
+  .block-intro__legend {
+    padding: 0px 140px 0 100px;
+  }
+
+  .block-intro__socials {
+    padding-right: 63px;
+    margin-bottom: 49px;
+  }
+
+  .block-intro__bottom {
+    padding-top: 208px;
+  }
+
   .information-title,
   .information__container,
-  .reviews,
   .table__block,
-  .contacts,
-  .page-footer__wrapper,
-  .clock {
+  .page-footer__wrapper {
     padding: 0 130px;
+  }
+
+  .information-block {
+    margin: 0;
+  }
+
+  .reviews {
+    background-image: url("../../img/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top 73px center;
+    padding: 142px 130px 0 130px;
+    margin-bottom: 98px;
+  }
+
+  .reviews__slider {
+    display: none;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+    padding-top: 44px;
+  }
+
+  .reviews__wrapper .reviews__slider-toggle {
+    display: block;
+    background-image: none;
+  }
+
+  .slider__toggle-left {
+    position: absolute;
+    top: 72px;
+    left: -19px;
+  }
+
+  .slider__toggle-right {
+    position: absolute;
+    top: 72px;
+    right: 17px;
+  }
+
+  .reviews__text {
+    padding: 0 120px;
+  }
+
+  .reviews__author-name {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .reviews__age {
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .information__container {
@@ -889,16 +1112,45 @@
     display: none;
   }
 
+  .information__text {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  .information__title {
+    padding-top: 62px;
+    margin-bottom: 5px;
+  }
+
+  .information__text:last-child {
+    padding: 0 240px;
+  }
+
   .information__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
 
+  .information__item-description {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .information__item-title {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 22px;
+  }
+
   .information__item {
     width: 280px;
-    padding-top: 310px;
+    padding-top: 327px;
     position: relative;
+    text-align: center;
 
     &::before {
       content: "";
@@ -956,11 +1208,31 @@
     margin: 0 auto;
   }
 
+  .contacts {
+    padding-top: 61px;
+  }
+
+  .contacts__title {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
   .contacts__container {
     display: grid;
     gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "call letter guest";
+    grid-template-columns: 260px 280px 260px;
+    grid-template-areas: "call guest letter";
+    padding: 40px 130px 0 150px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__subtitle {
+    margin-bottom: 19px;
+  }
+
+  .contacts .contacts__map {
+    padding: 0;
   }
 
   .call {
@@ -973,6 +1245,10 @@
 
   .guest {
     grid-area: guest;
+  }
+
+  .guest .contacts__link {
+    padding: 0;
   }
 
   .table__rates {
@@ -1005,7 +1281,38 @@
   }
 
   .clock {
+    display: grid;
+    grid-template-columns: 370px 1fr;
     background-color: @light-gray;
+    padding: 48px 130px 60px 130px;
+  }
+
+  .clock__img {
+    background-image: url(../../img/24-desktop.svg);
+    background-position: left top;
+  }
+
+  .clock__block {
+    padding-top: 94px;
+  }
+
+  .clock__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 31px;
+  }
+
+  .clock__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 26px;
+  }
+
+  .clock__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .user__form {
@@ -1246,5 +1553,29 @@
   .page-header__logo-desktop,
   .logo__desktop {
     display: block;
+  }
+
+  .page-footer {
+    padding-top: 67px;
+  }
+
+  .copyright__text {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 0 0 0;
+  }
+
+  .data__first {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .data-title__text {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .table__rates {
+    margin-bottom: 88px;
   }
 }
