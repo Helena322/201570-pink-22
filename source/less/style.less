@@ -138,7 +138,7 @@
   }
 
   .contacts {
-    padding-top: 43px;
+    padding: 44px 20px 25px 20px;
   }
 
   .contacts__container {
@@ -187,7 +187,7 @@
 
   .user-box__title {
     height: 240px;
-    margin-top: -66px;
+    margin-top: -69px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/back-mobile@2x.png");
@@ -199,7 +199,7 @@
   }
 
   .user-box__text {
-    padding-top: 100px;
+    padding-top: 96px;
   }
 
   .emotion__text,
@@ -259,6 +259,68 @@
   .slider__toggle-right {
     display: none;
   }
+
+  .user-name {
+    padding-top: 33px;
+  }
+
+  .name__box {
+    padding-bottom: 0;
+
+    &:first-child {
+      margin-bottom: 17px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 17px;
+    }
+  }
+
+  .name__second-name,
+  .name__name,
+  .name__patronymic {
+    margin-bottom: 4px;
+  }
+
+  .name__text {
+    padding-left: 23px;
+  }
+
+  .name__input {
+    padding-left: 20px;
+  }
+
+  .information__list {
+    margin-bottom: 19px;
+  }
+
+  .reviews {
+    margin-bottom: 80px;
+  }
+
+  .reviews__wrapper {
+    padding-top: 38px;
+  }
+
+  .page-footer__index {
+    padding-top: 10px;
+  }
+
+  .contacts__user {
+    padding: 33px 20px 25px 20px;
+  }
+
+  .page-footer__form {
+    padding-top: 56px;
+  }
+
+  .user-radio__title {
+    margin-bottom: 26px;
+  }
+
+  .checkbox__title {
+    padding: 0px 35px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -293,18 +355,6 @@
 
   .reviews__age {
     display: none;
-  }
-
-  .information__list {
-    margin-bottom: 19px;
-  }
-
-  .reviews {
-    margin-bottom: 80px;
-  }
-
-  .reviews__wrapper {
-    padding-top: 38px;
   }
 }
 
@@ -520,7 +570,7 @@
 
   .page-footer {
     min-height: auto;
-    padding-top: 17px;
+    padding-top: 22px;
   }
 
   .page-footer__wrapper {
@@ -549,17 +599,12 @@
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
-    padding-top: 150px;
+    padding-top: 177px;
   }
 
   .user__container {
     border: 2px solid @border-color;
     border-radius: 1px;
-  }
-
-  .user-radio,
-  .user-checkbox {
-    background: white;
   }
 
   .user__name {
@@ -590,14 +635,25 @@
     padding: 0;
   }
 
+  .name__second-name,
+  .name__name,
+  .name__patronymic {
+    margin-bottom: 0;
+  }
+
   .user__form {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
   }
 
-  .user-name,
+  .user-name {
+    padding-top: 73px;
+    order: 0;
+  }
+
   .user-radio {
+    background: white;
     order: 0;
   }
 
@@ -605,9 +661,44 @@
     order: 1;
   }
 
-  .user-checkbox,
-  .user-emotion,
+  .user-checkbox {
+    background: white;
+    margin-bottom: 60px;
+    padding: 0;
+    order: 2;
+  }
+
+  .emotion__title {
+    margin-bottom: 36px;
+  }
+
+  .emotion__box {
+    height: 191px;
+    padding: 0 58px;
+  }
+
+  .user-emotion {
+    padding: 0;
+    margin-bottom: 67px;
+    order: 2;
+  }
+
+  .user__button {
+    min-width: 298px;
+    min-height: 63px;
+  }
+
+  .user__submit {
+    padding-right: 10px;
+  }
+
+  .small__block {
+    padding-top: 17px;
+    text-align: right;
+  }
+
   .user__send {
+    padding: 0;
     order: 2;
   }
 
@@ -657,14 +748,39 @@
   .user__legend {
     font-size: 18px;
     line-height: 30px;
+    padding: 91px 50px 0 50px;
   }
 
   .user__personal-data {
-    height: 270px;
+    min-height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    margin-bottom: 20px;
+  }
+
+  .checkbox__title {
+    margin-bottom: 47px;
+  }
+
+  .checkbox__label::before {
+    left: 27px;
+    top: -4px;
+  }
+
+  .checkbox__input:checked + .checkbox__label::after {
+    left: 36px;
+    top: 4px;
+  }
+
+  .checkbox__selection {
+    padding-left: 87px;
+  }
+
+  .checkbox__box {
+    margin-bottom: 52px;
+    padding-top: 0px;
   }
 
   .name__label {
@@ -675,28 +791,42 @@
 
   .name__input {
     width: 100%;
+    min-height: 62px;
   }
 
   .name__text {
-    margin-right: 15px;
+    margin-right: 18px;
     padding: 0;
   }
 
   .name__box {
     padding: 0;
+
+    &:first-child {
+      margin-bottom: 53px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 53px;
+    }
   }
 
   .user-contacts__container {
-    padding: 20px 60px;
+    padding: 30px 58px 0 58px;
+  }
+
+  .radio {
+    padding-bottom: 0;
+    margin-bottom: 43px;
   }
 
   .radio__container {
     display: flex;
-    padding-left: 50px;
+    padding-left: 39px;
   }
 
-  .user-radio__container {
-    height: 295px;
+  .radio__text {
+    padding-left: 80px;
   }
 
   .contacts__desktop {
@@ -704,13 +834,23 @@
     flex-direction: column;
   }
 
-  .contacts,
+  .contacts {
+    padding: 0;
+  }
+
+  .contacts__text {
+    padding-top: 11px;
+    padding-left: 19px;
+  }
+
   .contacts__box {
+    margin-bottom: 24px;
     padding: 0;
   }
 
   .contacts__input {
     width: 100%;
+    min-height: 62px;
     box-sizing: border-box;
     padding-right: 60px;
   }
@@ -724,8 +864,8 @@
     &::before {
       content: "";
       position: absolute;
-      height: 55px;
-      width: 55px;
+      height: 57px;
+      width: 57px;
       right: 0;
       top: 0;
       border: 2px solid @border-color;
@@ -739,8 +879,8 @@
     position: absolute;
     height: 20px;
     width: 19px;
-    right: 20px;
-    top: 20px;
+    right: 22px;
+    top: 21px;
     background-image: url("../../img/phone-icon.svg");
     background-repeat: no-repeat;
     z-index: 15;
@@ -759,19 +899,18 @@
   }
 
   .checkbox__desktop {
-    height: 550px;
+    min-height: 492px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     padding-left: 30px;
   }
 
   .emotion__text {
-    height: 189px;
+    min-height: 193px;
   }
 
   .emotion__container {
-    height: 289px;
+    height: 295px;
   }
 
   .post__box-autor {
@@ -900,6 +1039,7 @@
   }
 
   .contacts {
+    margin-bottom: 58px;
     padding-top: 10px;
   }
 
@@ -927,6 +1067,26 @@
 
   .clock__title {
     padding-right: 150px;
+  }
+
+  .reviews__wrapper {
+    padding-top: 57px;
+  }
+
+  .name__title-second {
+    display: inline;
+  }
+
+  .page-footer__form {
+    padding-top: 50px;
+  }
+
+  .user-radio__title {
+    margin-bottom: 36px;
+  }
+
+  .contacts__index {
+    margin-bottom: 0;
   }
 }
 
@@ -1142,6 +1302,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    padding-top: 52px;
   }
 
   .information__item-description {
@@ -1296,7 +1457,7 @@
     display: grid;
     grid-template-columns: 370px 1fr;
     background-color: @light-gray;
-    padding: 48px 130px 60px 130px;
+    padding: 11px 130px 60px 130px;
   }
 
   .clock__img {
@@ -1340,15 +1501,25 @@
   }
 
   .user-name {
-    height: 300px;
+    min-height: 295px;
     grid-area: name;
     margin: 0;
-    padding: 0;
+    padding-top: 56px;
   }
 
   .user-radio {
+    margin: 0;
+    padding: 41px 0 0 10px;
     grid-area: radio;
-    padding: 0;
+  }
+
+  .user-radio__title {
+    margin-bottom: 38px;
+  }
+
+  .radio__container {
+    height: 305px;
+    padding-left: 53px;
   }
 
   .user-contacts {
@@ -1368,12 +1539,12 @@
   }
 
   .user-radio__container {
-    height: 297px;
+    height: 304px;
   }
 
   .user-box__title {
     margin-top: -110px;
-    height: 400px;
+    height: 394px;
     background-image: url("../../img/back-desktop.jpg");
     background-position: top;
 
@@ -1382,21 +1553,22 @@
     }
   }
 
+  .name__label {
+    padding-right: 10px;
+  }
+
   .user-box__text {
-    padding: 150px 130px 0 130px;
+    padding: 170px 130px 0 130px;
   }
 
   .user__legend {
     margin-bottom: 30px;
-    padding: 94px 130px 0 130px;
+    padding: 91px 210px 0 210px;
   }
 
   .user__personal-data {
     display: flex;
     flex-direction: column;
-    height: 300px;
-    justify-content: space-between;
-    align-items: stretch;
   }
 
   .user-contacts__container {
@@ -1462,6 +1634,14 @@
 
   .name__box {
     padding: 0;
+
+    &:first-child {
+      margin-bottom: 55px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 54px;
+    }
   }
 
   .name__title-second {

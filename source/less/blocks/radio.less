@@ -2,7 +2,7 @@
   background: @light-gray;
   border: none;
   text-align: center;
-  padding: 30px 0;
+  padding: 39px 0 13px 0;
 }
 
 .radio__container {
@@ -33,21 +33,22 @@
 }
 
 .radio__box {
-  margin-bottom: 20px;
-  padding-top: 20px;
+  margin-bottom: 33px;
+  padding-top: 0;
 }
 
 .radio__label {
   display: block;
   position: relative;
+  padding-top: 12px;
 
   &::before {
     content: "";
     position: absolute;
-    height: 41px;
-    width: 41px;
-    left: 30px;
-    top: -8px;
+    height: 37px;
+    width: 37px;
+    left: 20px;
+    top: 6px;
     border: 2px solid @border-color;
     border-radius: 50%;
     background-color: white;
@@ -58,10 +59,10 @@
 .radio__input:checked + .radio__label::after {
   content: "";
   position: absolute;
-  height: 15px;
-  width: 15px;
-  left: 43px;
-  top: 5px;
+  height: 11px;
+  width: 11px;
+  left: 33px;
+  top: 19px;
   border: 2px solid @pink;
   border-radius: 50%;
   background-color: @pink;
