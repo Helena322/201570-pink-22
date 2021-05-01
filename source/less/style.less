@@ -1429,6 +1429,8 @@
   .reviews__author-name {
     font-size: 24px;
     line-height: 30px;
+    letter-spacing: 1.1px;
+    margin-bottom: 2px;
   }
 
   .reviews__age {
@@ -1469,6 +1471,7 @@
   }
 
   .information__item-description {
+    position: relative;
     font-weight: normal;
     font-size: 18px;
     line-height: 30px;
@@ -1638,17 +1641,19 @@
   }
 
   .clock__title {
-    font-weight: bold;
     font-size: 30px;
     line-height: 30px;
-    margin-bottom: 31px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    padding-right: 150px;
+    letter-spacing: 1.3px;
   }
 
   .clock__text {
     font-weight: normal;
     font-size: 18px;
     line-height: 30px;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 
   .clock__link {
@@ -1662,11 +1667,15 @@
   }
 
   .contacts__box {
+    width: 100%;
     margin-bottom: 13px;
+    padding: 0;
   }
 
   .contacts__input {
+    width: 100%;
     padding-left: 18px;
+    box-sizing: border-box;
   }
 
   .user__form {
@@ -1760,20 +1769,10 @@
     padding: 28px 60px 0 60px;
   }
 
-  .contacts__input {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .contacts__text {
     margin: 0;
     padding-top: 11px;
     padding-left: 17px;
-  }
-
-  .contacts__box {
-    width: 100%;
-    padding: 0;
   }
 
   .contacts__label {
@@ -1971,7 +1970,8 @@
   .copyright__text {
     font-size: 18px;
     line-height: 18px;
-    margin: 0 0 0 0;
+    margin: 0 0 2px;
+    padding: 0 13px 0 0;
   }
 
   .data__first {
@@ -2043,10 +2043,6 @@
     margin-bottom: 22px;
   }
 
-  .information__item-description {
-    position: relative;
-  }
-
   .clock__tablet,
   .item-description__tablet {
     display: none;
@@ -2065,22 +2061,6 @@
     left: 7px;
   }
 
-  .clock__title {
-    font-weight: bold;
-    margin-bottom: 26px;
-    padding-right: 150px;
-    letter-spacing: 1.3px;
-  }
-
-  .clock__text {
-    margin-bottom: 30px;
-  }
-
-  .reviews__author-name {
-    letter-spacing: 1.1px;
-    margin-bottom: 2px;
-  }
-
   .social__list {
     left: 4px;
   }
@@ -2092,11 +2072,6 @@
   .page-footer__copyright {
     position: relative;
     top: 10px;
-  }
-
-  .copyright__text {
-    padding: 0 13px 0 0;
-    margin-bottom: 2px;
   }
 
   .data-title__hit {
