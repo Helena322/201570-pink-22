@@ -12,14 +12,17 @@
 }
 
 .contacts__block {
+  position: relative;
   align-items: center;
   text-align: center;
+  z-index: 5;
 }
 
 .contacts__subtitle {
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
+  letter-spacing: 0.9px;
   margin: 0;
 }
 
@@ -76,4 +79,27 @@
 .contacts__input::placeholder {
   color: @dark-blue;
   opacity: 1;
+}
+
+.contacts__index {
+  padding: 0;
+  position: relative;
+
+  &::after{
+    width: 320px;
+    height: 123px;
+    position: absolute;
+    content: "";
+    background-image: url("../../img/triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    bottom: 197px;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+.contacts__map {
+  padding: 0;
+  box-sizing: border-box;
+  z-index: -5;
 }

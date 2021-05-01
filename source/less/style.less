@@ -74,7 +74,7 @@
   .block-intro__preview {
     position: absolute;
     line-height: 120%;
-    top: 90px;
+    top: 88px;
     left: 0;
     right: 0;
     padding: 0 20px;
@@ -130,19 +130,19 @@
   }
 
   .information__iphone {
-    height: 280px;
+    height: 279px;
     background-image: url("../../img/iphone3-mobile.png");
     background-repeat: no-repeat;
     background-position: top center;
     order: 0;
   }
 
-  .contacts {
-    padding: 44px 20px 25px 20px;
+  .contacts__index {
+    padding: 43px 0 25px;
   }
 
   .contacts__container {
-    padding: 35px 20px;
+    padding: 34px 20px;
   }
 
   .information__title {
@@ -156,22 +156,34 @@
 
   .information__item-title {
     margin-bottom: 10px;
+
+    &:first-child {
+      margin-bottom: 11px;
+    }
   }
 
   .information__item {
     margin-bottom: 5px;
 
     &:first-child {
-      margin-bottom: 9px;
+      margin-bottom: 32px;
     }
 
     &:nth-child(2) {
-      margin-bottom: 9px;
+      margin-bottom: 33px;
     }
   }
 
   .block-intro__bottom {
-    padding: 30px 20px;
+    padding: 28px 20px 31px;
+  }
+
+  .social__list {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
   }
 
   .reviews,
@@ -291,7 +303,7 @@
   }
 
   .information__list {
-    margin-bottom: 19px;
+    margin-bottom: 41px;
   }
 
   .reviews {
@@ -299,11 +311,11 @@
   }
 
   .reviews__wrapper {
-    padding-top: 38px;
+    padding-top: 40px;
   }
 
   .page-footer__index {
-    padding-top: 10px;
+    padding-top: 11px;
   }
 
   .contacts__user {
@@ -320,6 +332,14 @@
 
   .checkbox__title {
     padding: 0 35px;
+  }
+
+
+  .clock__tablet,
+  .clock__desktop,
+  .item-description__tablet,
+  .item-description__desktop {
+    display: none;
   }
 }
 
@@ -397,6 +417,16 @@
     background-repeat: no-repeat;
   }
 
+  .clock__mobile,
+  .item-description__mobile {
+    display: none;
+  }
+
+  .clock__tablet,
+  .item-description__tablet {
+    display: block;
+  }
+
   .information__list {
     display: flex;
     flex-direction: column;
@@ -463,8 +493,24 @@
     order: 0;
   }
 
-  .socials__link:nth-child(2) {
-    margin: 0 30px;
+  .socials__link {
+    position: relative;
+
+    &:nth-child(1) {
+      top: 6px;
+      left: -2px;
+    }
+
+    &:nth-child(2) {
+      top: 2px;
+      left: -2px;
+      margin: 0 30px;
+    }
+
+    &:nth-child(3) {
+      top: -1px;
+      left: -1px;
+    }
   }
 
   .block-intro__box,
@@ -510,18 +556,27 @@
   }
 
   .information-block {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    background-color: white;
+
+    &::after{
+      width: 660px;
+      height: 509px;
+      background-image: url("../../img/grey-background2-tablet.svg");
+      top: 216px;
+    }
   }
 
   .information__container {
     display: grid;
     min-height: 350px;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 480px;
     padding: 0;
   }
 
   .information__iphone {
-    height: 485px;
+    height: 481px;
     background-image: url("../../img/iphone3-tablet.png");
     background-repeat: no-repeat;
     background-position: top left 31%;
@@ -543,8 +598,29 @@
     }
 
     &:nth-child(2) {
-      margin-bottom: 38px;
+      margin-bottom: 37px;
     }
+  }
+
+  .item-title__mood,
+  .item-title__world {
+    letter-spacing: -0.3px;
+  }
+
+  .item-title__friends {
+    letter-spacing: -0.1px;
+  }
+
+  .social__list {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: -7px;
+  }
+
+  .social__item:nth-child(2) {
+    margin: 0 6px;
   }
 
   .contacts__container {
@@ -558,25 +634,26 @@
 
   .call {
     grid-area: call;
+    left: 3px;
   }
 
   .letter {
     grid-area: letter;
+    left: 14px;
   }
 
   .guest {
     grid-area: guest;
   }
 
-  .page-footer {
+  .page-footer__index {
     min-height: auto;
-    padding-top: 22px;
+    padding-top: 32px;
   }
 
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
     padding: 0 20px;
   }
 
@@ -605,13 +682,20 @@
   .user__container {
     border: 2px solid @border-color;
     border-radius: 1px;
+    padding-bottom: 10px;
   }
 
   .user__name {
     border: none;
   }
 
-  .checkbox__container,
+  .checkbox__container {
+    display: flex;
+    height: 546px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .radio__container {
     display: flex;
     flex-direction: column;
@@ -706,19 +790,33 @@
   }
 
   .table__rates {
-    width: 608px;
+    width: 624px;
+    margin-bottom: 68px;
+  }
+
+  .table__button {
+    display: none;
   }
 
   .data-title {
-    width: 152px;
-    height: 75px;
+    width: 136px;
+    height: 78px;
     display: table-cell;
+    padding: 2px 0 0 0;
+    margin: 0;
   }
 
   .data__box {
-    width: 152px;
-    height: 45px;
+    width: 136px;
+    height: 44px;
     display: table-cell;
+    padding: 0;
+    margin: 0;
+    padding-left: 17px;
+  }
+
+  .data-title__text {
+    margin: 0;
   }
 
   .data__box-text {
@@ -731,12 +829,31 @@
   }
 
   .block-intro__button {
-    width: 290px;
+    width: 294px;
     height: 49px;
   }
 
+  .table__block {
+    padding: 0 20px;
+
+    &::after{
+      width: 660px;
+      height: 400px;
+      background-image: url("../../img/grey-background-tablet.svg");
+      top: -110px;
+    }
+  }
+
+  .contacts__index {
+    &::after {
+      width: 660px;
+      height: 123px;
+      background-image: url("../../img/triangle-white-footer-tablet.svg");
+      bottom: 309px;
+    }
+  }
+
   .reviews,
-  .table__block,
   .page-footer__wrapper {
     padding: 0 20px;
   }
@@ -811,7 +928,12 @@
     padding: 30px 58px 0 58px;
   }
 
+  .user-radio__container {
+    height: 292px;
+  }
+
   .radio {
+    padding-top: 29px;
     padding-bottom: 0;
     margin-bottom: 43px;
   }
@@ -902,7 +1024,7 @@
   }
 
   .emotion__container {
-    height: 295px;
+    height: 285px;
   }
 
   .post__box-autor {
@@ -1012,7 +1134,7 @@
   .reviews__text {
     font-size: 18px;
     line-height: 30px;
-    margin: 0 0 5px 0;
+    margin: 0 0 35px 0;
     padding: 0;
     order: 0;
   }
@@ -1022,6 +1144,7 @@
     font-size: 20px;
     line-height: 30px;
     font-style: normal;
+    letter-spacing: 0.8px;
     margin: 0;
     order: 1;
   }
@@ -1032,7 +1155,11 @@
 
   .contacts {
     margin-bottom: 58px;
-    padding: 10px 0 0 0;
+    padding: 45px 0 0 0;
+  }
+
+  .contacts__block {
+    position: relative;
   }
 
   .contacts__title {
@@ -1042,11 +1169,23 @@
     padding: 0 50px;
   }
 
+  .contacts__subtitle {
+    margin-bottom: 5px;
+  }
+
+  .contacts__container {
+    padding: 30px 20px 20px;
+  }
+
   .guest .contacts__link {
     padding: 0 200px;
   }
 
-  .page-footer__copyright,
+  .page-footer__copyright {
+    position: relative;
+    top: 11px;
+  }
+
   .page-footer__social,
   .page-footer__logo {
     margin: 0;
@@ -1058,7 +1197,9 @@
   }
 
   .clock__title {
+    font-weight: bold;
     padding-right: 150px;
+    letter-spacing: 0.75px;
   }
 
   .reviews__wrapper {
@@ -1079,6 +1220,18 @@
 
   .contacts__index {
     margin-bottom: 0;
+
+    &::after {
+      width: 1200px;
+      height: 123px;
+      background-image: url("../../img/triangle-white-footer-desktop.svg");
+      bottom: 403px;
+    }
+  }
+
+  .data-title__hit {
+    background-image: url("../../img/hit-tablet.svg");
+    background-position: left -2px top -1px;
   }
 }
 
@@ -1118,7 +1271,7 @@
 
   .page-header__logo {
     position: relative;
-    top: -5px;
+    top: -8px;
     width: 150px;
     height: 40px;
     background-repeat: no-repeat;
@@ -1166,7 +1319,7 @@
     grid-template-columns: 1fr 1fr;
     background-image: url("../../img/phone-desktop.png");
     background-repeat: no-repeat;
-    background-position: bottom right 5px;
+    background-position: bottom right 4px;
     margin: -110px 0 0 0;
     padding: 0;
 
@@ -1183,7 +1336,7 @@
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
-    margin-bottom: 38px;
+    margin-bottom: 37px;
     padding: 0 130px 0 90px;
   }
 
@@ -1207,13 +1360,31 @@
 
   .information-title,
   .information__container,
-  .table__block,
   .page-footer__wrapper {
     padding: 0 130px;
   }
 
+  .table__block {
+    padding: 0 130px;
+
+    &::after{
+      width: 1200px;
+      height: 534px;
+      background-image: url("../../img/grey-background-desktop.svg");
+      top: -157px;
+    }
+  }
+
   .information-block {
     margin: 0;
+    padding-bottom: 168px;
+
+    &::after{
+      width: 1200px;
+      height: 623px;
+      background-image: url("../../img/grey-background2-desktop.svg");
+      top: 317px;
+    }
   }
 
   .reviews {
@@ -1308,6 +1479,7 @@
     line-height: 30px;
     font-weight: bold;
     margin-bottom: 22px;
+
   }
 
   .information__item {
@@ -1315,6 +1487,7 @@
     padding-top: 357px;
     position: relative;
     text-align: center;
+    padding-right: 0;
 
     &::before {
       content: "";
@@ -1326,7 +1499,7 @@
     &:first-child {
       background-image: url("../../img/iphone1.png");
       background-repeat: no-repeat;
-      background-position: top center;
+      background-position: top left -21px;
     }
 
     &:nth-child(2) {
@@ -1338,7 +1511,7 @@
     &:last-child {
       background-image: url("../../img/iphone3.png");
       background-repeat: no-repeat;
-      background-position: top center;
+      background-position: top right -21px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -1401,10 +1574,12 @@
 
   .call {
     grid-area: call;
+    left: 0;
   }
 
   .letter {
     grid-area: letter;
+    left: 0;
   }
 
   .guest {
@@ -1417,7 +1592,7 @@
 
   .table__rates {
     width: 940px;
-    margin-bottom: 88px;
+    margin-bottom: 92px;
   }
 
   .data-title {
@@ -1426,8 +1601,9 @@
   }
 
   .data__box {
-    width: 233px;
+    width: 220px;
     height: 59px;
+    padding-left: 20px;
   }
 
   .data__box-text {
@@ -1480,9 +1656,23 @@
     line-height: 30px;
   }
 
+  .contacts__user {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .contacts__box {
+    margin-bottom: 13px;
+  }
+
+  .contacts__input {
+    padding-left: 18px;
+  }
+
   .user__form {
     display: grid;
-    gap: 50px;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
     grid-template-columns: 445px 445px;
     grid-template-areas:
       "name radio"
@@ -1516,22 +1706,25 @@
 
   .user-contacts {
     grid-area: contacts;
+    margin-bottom: 37px;
     padding: 0;
     order: 1;
   }
 
   .user-checkbox {
     grid-area: checkbox;
+    margin-bottom: 36px;
     padding: 0;
   }
 
   .user-emotion {
     grid-area: emotion;
+    margin-bottom: 47px;
     padding: 0;
   }
 
   .user-radio__container {
-    height: 304px;
+    height: 295px;
   }
 
   .user-box__title {
@@ -1564,7 +1757,7 @@
   }
 
   .user-contacts__container {
-    padding: 20px 60px;
+    padding: 28px 60px 0 60px;
   }
 
   .contacts__input {
@@ -1574,6 +1767,8 @@
 
   .contacts__text {
     margin: 0;
+    padding-top: 11px;
+    padding-left: 17px;
   }
 
   .contacts__box {
@@ -1590,7 +1785,7 @@
     &::before {
       content: "";
       position: absolute;
-      height: 55px;
+      height: 57px;
       width: 55px;
       right: 0;
       top: 0;
@@ -1606,7 +1801,7 @@
     height: 20px;
     width: 19px;
     right: 20px;
-    top: 20px;
+    top: 21px;
     background-image: url("../../img/phone-icon.svg");
     background-repeat: no-repeat;
     z-index: 15;
@@ -1618,7 +1813,7 @@
     height: 13px;
     width: 18px;
     right: 20px;
-    top: 23px;
+    top: 24px;
     background-image: url("../../img/mail-icon.svg");
     background-repeat: no-repeat;
     z-index: 15;
@@ -1648,24 +1843,55 @@
   }
 
   .checkbox__container {
-    height: 228px;
+    height: 227px;
     align-items: center;
   }
 
   .checkbox__desktop {
     display: grid;
-    height: 140px;
+    min-height: 140px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 15px;
-    grid-row-gap: 20px;
+    grid-row-gap: 0;
     grid-auto-flow: column;
     justify-items: flex-start;
     padding: 0;
   }
 
+  .checkbox__label::before {
+    left: 15px;
+  }
+
+  .checkbox__сhuck,
+  .checkbox__souvenirs {
+    position: relative;
+    padding: 0;
+    left: 27px;
+
+    &::before {
+      left: 16px;
+    }
+  }
+
+  .checkbox__tower,
+  .checkbox__hotel {
+    position: relative;
+    padding: 0;
+    left: 33px;
+
+    &::before {
+      left: 15px;
+    }
+  }
+
+  .checkbox__input:checked + .checkbox__label::after {
+    left: 23px;
+    top: 3px;
+  }
+
   .checkbox__selection {
-    padding-left: 70px;
+    padding-left: 74px;
   }
 
   .emotion__box {
@@ -1685,7 +1911,6 @@
 
   .small__block {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
   }
 
@@ -1757,5 +1982,125 @@
   .data-title__text {
     font-size: 24px;
     line-height: 30px;
+    margin-bottom: 7px;
+  }
+
+  .emotion__container {
+    height: 210px;
+  }
+
+  .emotion__title {
+    margin-bottom: 34px;
+  }
+
+  .emotion__text {
+    min-height: 100px;
+    max-height: 128px;
+    padding: 13px 0 0 20px;
+  }
+
+  .block-intro__button {
+    height: 50px;
+    letter-spacing: 3px;
+  }
+
+  .socials__link {
+    position: relative;
+
+    &:nth-child(1) {
+      top: 1px;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      left: -1px;
+      margin: 0 30px;
+    }
+
+    &:nth-child(3) {
+      top: -2px;
+      left: 2px;
+    }
+  }
+
+  .item-title__mood {
+    letter-spacing: 1.5px;
+    padding-right: 13px;
+  }
+
+  .item-title__world {
+    letter-spacing: 1.5px;
+    padding: 0 20px;
+  }
+
+  .item-title__friends {
+    letter-spacing: 1.5px;
+    padding-left: 13px;
+  }
+
+  .information__item-title:first-child {
+    margin-bottom: 22px;
+  }
+
+  .information__item-description {
+    position: relative;
+  }
+
+  .clock__tablet,
+  .item-description__tablet {
+    display: none;
+  }
+
+  .clock__desktop,
+  .item-description__desktop {
+    display: block;
+  }
+
+  .item__mood .item-description__desktop {
+    left: -7px;
+  }
+
+  .item__friends .item-description__desktop {
+    left: 7px;
+  }
+
+  .clock__title {
+    font-weight: bold;
+    margin-bottom: 26px;
+    padding-right: 150px;
+    letter-spacing: 1.3px;
+  }
+
+  .clock__text {
+    margin-bottom: 30px;
+  }
+
+  .reviews__author-name {
+    letter-spacing: 1.1px;
+    margin-bottom: 2px;
+  }
+
+  .social__list {
+    left: 4px;
+  }
+
+  .social__item:nth-child(2) {
+    margin: 0 3px;
+  }
+
+  .page-footer__copyright {
+    position: relative;
+    top: 10px;
+  }
+
+  .copyright__text {
+    padding: 0 13px 0 0;
+    margin-bottom: 2px;
+  }
+
+  .data-title__hit {
+    background-image: url("../../img/hit.svg");
+    background-position: left 0 top -2px;
   }
 }
