@@ -206,12 +206,27 @@
     }
   }
 
+  .title__catalog {
+    height: 237px;
+    min-height: 237px;
+    margin-top: -67px;
+  }
+
   .user-contacts__title {
     display: none;
   }
 
   .user-box__text {
     padding-top: 96px;
+  }
+
+  .user-box__text-catalog {
+    padding-top: 94px;
+  }
+
+  .user__legend-catalog {
+    padding: 44px 20px 0 20px;
+    margin-bottom: 50px;
   }
 
   .emotion__text,
@@ -334,7 +349,8 @@
     padding: 0 35px;
   }
 
-
+  .modal__close,
+  .site-list__desktop,
   .clock__tablet,
   .clock__desktop,
   .item-description__tablet,
@@ -560,7 +576,7 @@
     background-color: white;
 
     &::after {
-      width: 660px;
+      width: 100%;
       height: 509px;
       background-image: url("../../img/grey-background2-tablet.svg");
       top: 216px;
@@ -743,10 +759,6 @@
     order: 0;
   }
 
-  .user-contacts {
-    order: 1;
-  }
-
   .user-checkbox {
     background: white;
     margin-bottom: 60px;
@@ -839,18 +851,19 @@
     padding: 0 20px;
 
     &::after {
-      width: 660px;
       height: 400px;
       background-image: url("../../img/grey-background-tablet.svg");
       top: -110px;
+      background-size: cover;
     }
   }
 
   .contacts__index {
     margin-bottom: 0;
+    padding: 45px 0 0 0;
 
     &::after {
-      width: 660px;
+      width: 100%;
       height: 123px;
       background-image: url("../../img/triangle-white-footer-tablet.svg");
       bottom: 309px;
@@ -939,7 +952,7 @@
   .radio {
     padding-top: 29px;
     padding-bottom: 0;
-    margin-bottom: 43px;
+    margin-bottom: 9px;
   }
 
   .radio__text {
@@ -1154,7 +1167,7 @@
 
   .contacts {
     margin-bottom: 0;
-    padding: 45px 0 0 0;
+    padding: 44px 0 0 0;
   }
 
   .contacts__block {
@@ -1216,6 +1229,67 @@
   .data-title__hit {
     background-image: url("../../img/hit-tablet.svg");
     background-position: left -2px top -1px;
+  }
+
+  .user-contacts {
+    margin-bottom: 57px;
+    order: 1;
+  }
+
+  .page-footer__form {
+    min-height: 90px;
+  }
+
+  .modal__failure {
+    position: fixed;
+    top: 20%;
+    left: 100px;
+    right: 100px;
+    width: 460px;
+    height: 322px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 70px;
+    margin: 0 0 22px;
+    letter-spacing: 1.1px;
+  }
+
+  .modal__text {
+    padding: 0 70px;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 26px;
+  }
+
+  .modal__button {
+    min-width: 300px;
+  }
+
+  .modal__success {
+    position: fixed;
+    top: 20%;
+    left: 100px;
+    right: 100px;
+    width: 460px;
+    height: 390px;
+    margin: 0 auto;
+  }
+
+  .modal__title-success {
+    letter-spacing: 1.5px;
+  }
+
+  .modal__text-success {
+    margin: 0 0 30px;
+  }
+
+  .modal__block-success {
+    padding: 51px 0;
   }
 }
 
@@ -1352,10 +1426,10 @@
     padding: 0 130px;
 
     &::after {
-      width: 1200px;
       height: 534px;
       background-image: url("../../img/grey-background-desktop.svg");
       top: -157px;
+      background-size: cover;
     }
   }
 
@@ -1364,7 +1438,7 @@
     padding-bottom: 168px;
 
     &::after {
-      width: 1200px;
+      width: 100%;
       height: 623px;
       background-image: url("../../img/grey-background2-desktop.svg");
       top: 317px;
@@ -2026,11 +2100,13 @@
     margin-bottom: 22px;
   }
 
+  .site-list__mobile,
   .clock__tablet,
   .item-description__tablet {
     display: none;
   }
 
+  .site-list__desktop,
   .clock__desktop,
   .item-description__desktop {
     display: block;
@@ -2066,10 +2142,66 @@
     margin-bottom: 0;
 
     &::after {
-      width: 1200px;
+      width: 100%;
       height: 123px;
       background-image: url("../../img/triangle-white-footer-desktop.svg");
       bottom: 403px;
     }
+  }
+
+  .modal__failure {
+    position: fixed;
+    width: 780px;
+    height: 337px;
+    margin: 0 auto;
+    padding-top: 40px;
+    top: 20%;
+    left: 210px;
+    right: 210px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 70px;
+    margin: 0 0 22px;
+    letter-spacing: 1.1px;
+  }
+
+  .modal__text {
+    padding: 0 185px;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 106px;
+  }
+
+  .modal__button {
+    min-width: 300px;
+  }
+
+  .modal__success {
+    position: fixed;
+    width: 780px;
+    height: 337px;
+    margin: 0 auto;
+    top: 20%;
+    left: 210px;
+    right: 210px;
+  }
+
+  .modal__title-success {
+    letter-spacing: 1.5px;
+  }
+
+  .modal__text-success {
+    margin: 0 0 39px;
+  }
+
+  .modal__block-success {
+    padding: 51px 0;
+  }
+
+  .modal__button-success {
+    width: 458px;
   }
 }
