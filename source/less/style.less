@@ -433,6 +433,8 @@
     background-repeat: no-repeat;
   }
 
+  .table__rates::before,
+  .table__rates::after,
   .clock__mobile,
   .item-description__mobile {
     display: none;
@@ -863,10 +865,9 @@
     padding: 45px 0 0 0;
 
     &::after {
-      width: 660px;
-      height: 123px;
-      background-image: url("../../img/triangle-white-footer-tablet.svg");
-      bottom: 309px;
+      width: 100%;
+      bottom: 214px;
+      clip-path: polygon(50% 42%, 0 0, 100% 0);
     }
   }
 
@@ -2140,9 +2141,8 @@
 
     &::after {
       width: 100%;
-      height: 123px;
-      background-image: url("../../img/triangle-white-footer-desktop.svg");
-      bottom: 403px;
+      bottom: 342px;
+      clip-path: polygon(50% 63%, 0 0, 100% 0);
     }
   }
 
