@@ -25,24 +25,28 @@
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link site-list__index" href="index.html">
-                Главная
+                <span class="site-list__desktop">Главная</span>
+                <span class="site-list__mobile">ГЛАВНАЯ</span>
               </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link site-list__catalog" href="catalog.html">
-                Фотографии
+                <span class="site-list__desktop">Фотографии</span>
+                <span class="site-list__mobile">ФОТОГРАФИИ</span>
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link site-list__form" href="#">
-                Конкурс
+                <span class="site-list__desktop">Конкурс</span>
+                <span class="site-list__mobile">КОНКУРС</span>
               </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link site-list__academy" href="https://htmlacademy.ru/intensive/adaptive">
-                HTML Academy
+                <span class="site-list__desktop">HTML Academy</span>
+                <span class="site-list__mobile">HTML ACADEMY</span>
               </a>
             </li>
           </ul>
@@ -63,13 +67,13 @@
               <fieldset class="user__container user__name">
                 <div class="user__personal-data">
                   <div class="name__box">
-                    <label class="name__label"><span class="name__text text">Фамилия:</span><input class="text-input name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
+                    <label class="name__label"><span class="name__text name__second-name text">ФАМИЛИЯ:</span><input class="text-input name__input" type="text" name="second_name" placeholder="Укажите фамилию *" required></label>
                   </div>
                   <div class="name__box">
-                    <label class="name__label"><span class="name__text text">Имя:</span><input class="text-input name__input" type="text" name="name" placeholder="Введите ваше имя *" required></label>
+                    <label class="name__label"><span class="name__text name__name text">ИМЯ:</span><input class="text-input name__input" type="text" name="name" placeholder="Введите ваше имя *" required></label>
                     </div>
                   <div class="name__box">
-                    <label class="name__label"><span class="name__text text">Отчество:</span><input class="text-input name__input" type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
+                    <label class="name__label"><span class="name__text name__patronymic text">ОТЧЕСТВО:</span><input class="text-input name__input" type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
                   </div>
                 </div>
               </fieldset>
@@ -89,19 +93,19 @@
                   </div>
                   <div class="checkbox__box">
                     <input class="checkbox__input" type="checkbox" name="сhuck" id="сhuck">
-                    <label for="сhuck" class="checkbox__label"><span class="checkbox__selection">Видел Чака Норриса</span></label>
+                    <label for="сhuck" class="checkbox__label checkbox__сhuck"><span class="checkbox__selection">Видел Чака Норриса</span></label>
                   </div>
                   <div class="checkbox__box">
                     <input class="checkbox__input" type="checkbox" name="souvenirs" id="souvenirs">
-                    <label for="souvenirs" class="checkbox__label"><span class="checkbox__selection">Накупил сувениров</span></label>
+                    <label for="souvenirs" class="checkbox__label checkbox__souvenirs"><span class="checkbox__selection">Накупил сувениров</span></label>
                   </div>
                   <div class="checkbox__box">
                     <input class="checkbox__input" type="checkbox" name="tower" id="tower" checked>
-                    <label for="tower" class="checkbox__label"><span class="checkbox__selection">Удержал башню</span></label>
+                    <label for="tower" class="checkbox__label checkbox__tower"><span class="checkbox__selection">Удержал башню</span></label>
                   </div>
                   <div class="checkbox__box">
                     <input class="checkbox__input" type="checkbox" name="hotel" id="hotel">
-                    <label for="hotel" class="checkbox__label"><span class="checkbox__selection">Разгромил отель</span></label>
+                    <label for="hotel" class="checkbox__label checkbox__hotel"><span class="checkbox__selection">Разгромил отель</span></label>
                   </div>
                 </div>
               </fieldset>
@@ -112,10 +116,10 @@
                 <legend class="user-contacts__title">контактная информация</legend>
                 <div class="contacts__desktop">
                   <div class="contacts__box">
-                    <label class="contacts__label contacts-label__tel"><span class="contacts__tel contacts__text">Номер телефона</span><input class="text-input contacts__input" type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
+                    <label class="contacts__label contacts-label__tel"><span class="contacts__tel contacts__text">НОМЕР ТЕЛЕФОНА</span><input class="text-input contacts__input" type="tel" name="tel" placeholder="Номер, пожалуйста"></label>
                   </div>
                   <div class="contacts__box">
-                    <label class="contacts__label contacts-label__mail"><span class="contacts__email contacts__text">Адрес почты</span><input class="text-input contacts__input" type="email" name="email" placeholder="Введите почту *" required></label>
+                    <label class="contacts__label contacts-label__mail"><span class="contacts__email contacts__text">АДРЕС ПОЧТЫ</span><input class="text-input contacts__input" type="email" name="email" placeholder="Введите почту *" required></label>
                   </div>
                 </div>
               </fieldset>
@@ -123,7 +127,7 @@
 
             <div class="user-radio radio">
               <fieldset class="user__container user-radio__container">
-                <legend class="checkbox__title">С каким приложением путешествовали?</legend>
+                <legend class="user-radio__title">С каким приложением путешествовали?</legend>
                   <div class="radio__container">
                     <div class="radio__box">
                       <input class="radio__input" type="radio" name="os" id="ios" value="ios" checked>
@@ -163,7 +167,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer__form">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
           <a class="logo__link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -193,17 +197,19 @@
       </div>
     </footer>
 
-    <section class="page__modal modal modal__success pop-up__success visually-hidden">
-      <h3 class="modal__title">Ваша заявка отправлена</h3>
-      <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-      <button class="modal__button">закрыть окно</button>
+    <section class="page__modal modal modal__close modal__success pop-up__success">
+      <h3 class="modal__title modal__title-success">Ваша заявка отправлена</h3>
+      <p class="modal__text modal__text-success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.</p>
+      <div class="modal__block-success">
+        <button class="modal__button modal__button-success">закрыть окно</button>
+      </div>
     </section>
 
-    <section class="page__modal modal modal__failure pop-up__failure visually-hidden">
-      <h3 class="modal__title">Что-то пошло не так!</h3>
-      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <div class="modal__block">
-        <button class="modal__button">ок</button>
+    <section class="page__modal modal modal__close modal__failure pop-up__failure">
+      <h3 class="modal__title modal__title-failure">Что-то пошло не&nbsp;так!</h3>
+      <p class="modal__text modal__text-failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal__block-failure">
+        <button class="modal__button modal__button-failure">ок</button>
       </div>
     </section>
 

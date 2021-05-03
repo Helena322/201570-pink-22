@@ -25,24 +25,28 @@
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link site-list__index" href="index.html">
-                Главная
+                <span class="site-list__desktop">Главная</span>
+                <span class="site-list__mobile">ГЛАВНАЯ</span>
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link site-list__catalog" href="#">
-                Фотографии
+                <span class="site-list__desktop">Фотографии</span>
+                <span class="site-list__mobile">ФОТОГРАФИИ</span>
               </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link site-list__form" href="form.html">
-                Конкурс
+                <span class="site-list__desktop">Конкурс</span>
+                <span class="site-list__mobile">КОНКУРС</span>
               </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link site-list__academy" href="https://htmlacademy.ru/intensive/adaptive">
-                HTML Academy
+                <span class="site-list__desktop">HTML Academy</span>
+                <span class="site-list__mobile">HTML ACADEMY</span>
               </a>
             </li>
           </ul>
@@ -52,11 +56,11 @@
 
     <main class="page-main user-box">
       <h1 class="visually-hidden">Приложение Pink</h1>
-      <div class="user-box__title">
-        <h2 class="user-box__text">Фотографии пользователей</h2>
+      <div class="user-box__title title__catalog">
+        <h2 class="user-box__text user-box__text-catalog">Фотографии пользователей</h2>
       </div>
       <section class="photo user">
-        <h3 class="user__legend user__legend-catalog">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h3>
+        <h3 class="user__legend user__legend-catalog">Взгляните на фотографии,&nbsp;которые выкладывают&nbsp;пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</h3>
         <article class="photo__post post post-day">
           <div class="post__box">
             <picture class="post-day__photo">
@@ -70,7 +74,7 @@
                 <time class="autor__post-time" datetime="2018-11-27T03:00">(5 минут назад)</time>
               </div>
               <div class="autor__post-text">
-                <p class="post-text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <p class="post-text">Прыгать или нет? Напишите в коментарии свой совет&nbsp;и смотрите&nbsp;прямую&nbsp;трансляцию&nbsp;в перископе, задавайте свои вопросы!</p>
               </div>
               <div class="post__like like post-day__like">
                 <img class="like__img" src="img/heart.svg" width="13" height="12" alt="Лайк">
@@ -84,10 +88,10 @@
         </article>
         <article class="post photo__post photo__container">
           <div class="post__box post__box-autor">
-            <picture>
+            <picture class="post__photo">
               <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-1-tablet.png 1x, img/photo-1-tablet@2x.png 2x">
-              <img src="img/photo-1-mobile.png" width="100%" height="100%" srcset="img/photo-1-mobile@2x.png 2x" alt="Фотография">
+              <img class="post__photo-image" src="img/photo-1-mobile.png" width="100%" height="100%" srcset="img/photo-1-mobile@2x.png 2x" alt="Фотография">
             </picture>
             <div class="post__information">
               <div class="post__autor autor">
@@ -107,10 +111,10 @@
             </div>
           </div>
           <div class="post post__box post__box-autor">
-            <picture>
+            <picture class="post__photo">
               <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-2-tablet.png 1x, img/photo-2-tablet@2x.png 2x">
-              <img src="img/photo-2-mobile.png" width="100%" height="100%" srcset="img/photo-2-mobile@2x.png 2x" alt="Фотография">
+              <img class="post__photo-image" src="img/photo-2-mobile.png" width="100%" height="100%" srcset="img/photo-2-mobile@2x.png 2x" alt="Фотография">
             </picture>
             <div class="post__information">
               <div class="post__autor autor">
@@ -133,7 +137,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-3-tablet.png 1x, img/photo-3-tablet1@2x.png 2x">
-              <img src="img/photo-3-mobile.png" width="100%" height="100%" srcset="img/photo-3-mobile@2x.png 2x" alt="Фотография">
+              <img class="post__photo-image" src="img/photo-3-mobile.png" width="100%" height="100%" srcset="img/photo-3-mobile@2x.png 2x" alt="Фотография">
             </picture>
             <div class="post__information">
               <div class="post__autor autor">
@@ -156,7 +160,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-4-tablet.png 1x, img/photo-4-tablet1@2x.png 2x">
-              <img src="img/photo-4-mobile.png" width="100%" height="100%" srcset="img/photo-4-mobile@2x.png 2x" alt="Фотография">
+              <img class="post__photo-image" src="img/photo-4-mobile.png" width="100%" height="100%" srcset="img/photo-4-mobile@2x.png 2x" alt="Фотография">
             </picture>
             <div class="post__information">
               <div class="post__autor autor">
@@ -179,7 +183,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-5-tablet.png 1x, img/photo-5-tablet1@2x.png 2x">
-              <img src="img/photo-5-mobile.png" width="100%" height="100%" srcset="img/photo-5-mobile@2x.png 2x" alt="Фотография">
+              <img class="post__photo-image" src="img/photo-5-mobile.png" width="100%" height="100%" srcset="img/photo-5-mobile@2x.png 2x" alt="Фотография">
             </picture>
             <div class="post__information">
               <div class="post__autor autor">
@@ -202,7 +206,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-6-tablet.png 1x, img/photo-6-tablet1@2x.png 2x">
-              <img src="img/photo-6-mobile.png" width="100%" height="100%" srcset="img/photo-6-mobile@2x.png 2x" alt="Фотография">
+              <img class="post__photo-image" src="img/photo-6-mobile.png" width="100%" height="100%" srcset="img/photo-6-mobile@2x.png 2x" alt="Фотография">
             </picture>
             <div class="post__information">
               <div class="post__autor autor">
@@ -223,7 +227,7 @@
           </div>
         </article>
         <article class="filter">
-          <h4 class="filter__legend user__legend user__legend-catalog">Затмите их всех!</h4>
+          <h4 class="filter__legend user__legend user__legend-filter">Затмите их всех!</h4>
           <p class="filter__legend user__legend-text">Выкладывайте все, что накопилось в телефоне!</p>
           <div class="filter__container">
             <div class="filter__box filter__box-photo">
@@ -236,7 +240,7 @@
               <div class="filter__icon icon">
                 <span class="icon__box">
                   <button class="icon__toggle icon__toggle--current" type="button"></button>
-                  <input class="icon__range" type="range" min="0" max="100">
+                  <input class="icon__range" type="range" value="80" min="0" max="100">
                 </span>
                 <span class="icon__box">
                   <button class="icon__toggle" type="button"></button>
