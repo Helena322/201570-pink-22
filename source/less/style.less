@@ -119,11 +119,6 @@
     display: none;
   }
 
-  .data-title,
-  .data__box {
-    display: none;
-  }
-
   .data-title__hit,
   .data__box-visible {
     display: table-cell;
@@ -187,9 +182,12 @@
   }
 
   .reviews,
-  .table__block,
   .page-footer__wrapper {
     padding: 0 20px;
+  }
+
+  .table__block {
+    overflow: hidden;
   }
 
   .clock,
@@ -1381,7 +1379,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/phone-desktop@2x.png");
-      background-position: bottom 0% right 10%;
+      background-position: bottom 0% right 3%;
       background-size: 1050px 645px;
     }
   }
