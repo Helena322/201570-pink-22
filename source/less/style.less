@@ -188,6 +188,10 @@
 
   .table__block {
     overflow: hidden;
+
+    &::after {
+      overflow: visible;
+    }
   }
 
   .clock,
@@ -321,6 +325,13 @@
 
   .reviews {
     margin-bottom: 80px;
+
+    &::after {
+      width: 100%;
+      height: 175px;
+      bottom: -80px;
+      left: 0;
+    }
   }
 
   .reviews__wrapper {
@@ -1420,13 +1431,6 @@
 
   .table__block {
     padding: 0 130px;
-
-    &::after {
-      height: 534px;
-      background-image: url("../../img/grey-background-desktop.svg");
-      top: -157px;
-      background-size: cover;
-    }
   }
 
   .information-block {
@@ -1447,6 +1451,14 @@
     background-position: top 73px center;
     padding: 142px 130px 0 130px;
     margin-bottom: 98px;
+
+    &::after {
+      width: 100%;
+      height: 175px;
+      bottom: -80px;
+      background-image: url("../../img/grey-background-tablet.svg");
+      left: 0;
+    }
   }
 
   .reviews__slider {
@@ -2198,5 +2210,13 @@
 
   .modal__button-success {
     width: 458px;
+  }
+
+  .reviews {
+    &::after {
+      height: 234px;
+      background-image: url("../../img/grey-background-desktop.svg");
+      bottom: -174px;
+    }
   }
 }
