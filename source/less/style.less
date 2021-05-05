@@ -200,7 +200,7 @@
   }
 
   .user-box__title {
-    height: 240px;
+    min-height: 240px;
     margin-top: -69px;
 
     @media (min-resolution: 2dppx) {
@@ -272,6 +272,10 @@
         background-image: url("../../img/photo-6-mobile.png");
       }
     }
+  }
+
+  .post__photo-image {
+    width: 100%;
   }
 
   .map__box {
@@ -358,19 +362,30 @@
     padding: 0 35px;
   }
 
+  .user__catalog-tablet,
+  .user__catalog-desktop,
+  .user__catalog--tablet,
+  .user__catalog--desktop,
   .modal__close,
-  .site-list__desktop,
   .clock__tablet,
   .clock__desktop,
   .item-description__tablet,
   .item-description__desktop {
     display: none;
   }
+
+  .page-footer__catalog {
+    padding-top: 40px;
+  }
+
+  .site-list__desktop {
+    text-transform: uppercase;
+  }
 }
 
 @media (max-width: 1199px) {
   .site-list__item {
-    height: 63px;
+    height: 64px;
     border: none;
   }
 
@@ -442,6 +457,8 @@
     background-repeat: no-repeat;
   }
 
+  .user__catalog-mobile,
+  .user__catalog--mobile,
   .table__rates::before,
   .table__rates::after,
   .clock__mobile,
@@ -449,6 +466,8 @@
     display: none;
   }
 
+  .user__catalog-tablet,
+  .user__catalog--tablet,
   .clock__tablet,
   .item-description__tablet {
     display: block;
@@ -691,7 +710,7 @@
 
   .user-box__title {
     margin-top: -110px;
-    height: 440px;
+    min-height: 440px;
     background-image: url("../../img/back-tablet.png");
     background-position: top;
 
@@ -733,10 +752,12 @@
 
   .photo__container {
     display: grid;
-    gap: 20px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+    padding: 0 20px;
   }
 
   .filter__block {
@@ -889,6 +910,14 @@
     font-size: 18px;
     line-height: 30px;
     padding: 91px 50px 0 50px;
+  }
+
+  .user__catalog-tablet {
+    margin-bottom: 77px;
+  }
+
+  .user__catalog--tablet {
+    margin-bottom: 0;
   }
 
   .user__personal-data {
@@ -1058,19 +1087,59 @@
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
-    margin: 0;
+    margin: -4px 0 0;
   }
 
   .post-day__info {
-    margin: 0 20px;
+    position: relative;
+    min-height: 98px;
+    margin: -4px 20px 0;
+    padding: 23px 30px 0;
   }
 
-  .post__autor {
+  .post-day {
+    margin-bottom: 51px;
+  }
+
+  .post-text {
+    padding-right: 30px;
+  }
+
+  .post-day__autor {
+    width: 200px;
     margin: 0;
+    order: 0;
+  }
+
+  .post-day__like {
+    position: absolute;
+    content: "";
+    right: 12px;
+    order: 1;
+    padding: 0;
+  }
+
+  .post-day__like-box {
+    display: flex;
+    order: 0;
+  }
+
+  .post-day__img {
+    display: flex;
+    margin-left: 17px;
+    order: 1;
+  }
+
+  .post-day__like-text {
+    margin-right: 2px;
+  }
+
+  .autor__post-text {
+    order: 2;
   }
 
   .like {
-    margin-top: auto;
+    margin-top: 2px;
   }
 
   .filter__box-photo {
@@ -1088,6 +1157,7 @@
     justify-content: space-between;
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
   }
 
   .icon__box {
@@ -1105,7 +1175,7 @@
     min-height: 509px;
 
     &::before {
-      margin-top: 60px;
+      margin-top: 57px;
     }
   }
 
@@ -1322,9 +1392,20 @@
     display: inline-block;
     box-shadow: none;
     margin-left: 75px;
+  }
 
-    &--active {
+
+  .site-list__item--active {
+    position: relative;
+
+    &::after {
+      width: 100%;
+      height: 50px;
+      content: "";
+      position: absolute;
       border-bottom: 2px solid white;
+      left: 0;
+      bottom: -5px;
     }
   }
 
@@ -1801,7 +1882,7 @@
 
   .user-box__title {
     margin-top: -110px;
-    height: 394px;
+    min-height: 394px;
     background-image: url("../../img/back-desktop.jpg");
     background-position: top;
 
@@ -2106,13 +2187,16 @@
     margin-bottom: 22px;
   }
 
+  .user__catalog-tablet,
+  .user__catalog--tablet,
   .site-list__mobile,
   .clock__tablet,
   .item-description__tablet {
     display: none;
   }
 
-  .site-list__desktop,
+  .user__catalog-desktop,
+  .user__catalog--desktop,
   .clock__desktop,
   .item-description__desktop {
     display: block;
@@ -2208,5 +2292,9 @@
 
   .modal__button-success {
     width: 458px;
+  }
+
+  .site-list__desktop {
+    text-transform: capitalize;
   }
 }
