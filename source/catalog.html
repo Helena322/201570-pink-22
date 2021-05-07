@@ -56,16 +56,16 @@
         <h2 class="user-box__text user-box__text-catalog">Фотографии пользователей</h2>
       </div>
       <section class="photo user">
-        <h3 class="user__legend user__legend-catalog user__catalog-mobile">Взгляните на фотографии,&nbsp;которые выкладывают&nbsp;пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</h3>
-        <h3 class="user__legend user__legend-catalog user__catalog-tablet">Взгляните на фотографии,&nbsp;которые&nbsp;выкладывают пользователи!&nbsp;Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</h3>
-        <h3 class="user__legend user__legend-catalog user__catalog-desktop">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</h3>
+        <h3 class="user__legend user__legend-catalog">Взгляните на фотографии,&nbsp;которые выкладывают&nbsp;пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</h3>
         <article class="photo__post post post-day">
           <div class="post__box">
-            <picture class="post-day__photo">
-              <source media="(min-width: 1200px)" srcset="img/panorama-desktop.png 1x, img/panorama-desktop@2x.png 2x">
-              <source media="(min-width: 660px)" srcset="img/panorama-tablet2.png 1x, img/panorama-tablet2@2x.png 2x">
-              <img src="img/panorama-tablet.png" width="100%" height="100%" srcset="img/panorama-tablet@2x.png 2x" alt="Фотография">
-            </picture>
+            <a class="post__link" href="img/panorama-desktop.png">
+              <picture class="post-day__photo">
+                <source media="(min-width: 1200px)" srcset="img/panorama-desktop.png 1x, img/panorama-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet2.png 1x, img/panorama-tablet2@2x.png 2x">
+                <img src="img/panorama-tablet.png" width="100%" height="100%" srcset="img/panorama-tablet@2x.png 2x" alt="Фотография">
+              </picture>
+            </a>
             <div class="post__information post-day__info">
               <div class="post__autor post-day__autor autor">
                 <h4 class="autor__post-name">Анна</h4>
@@ -88,11 +88,15 @@
         </article>
         <article class="post photo__post photo__container">
           <div class="post post__box post__box-autor">
-            <picture class="post__photo">
-              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-1-tablet.png 1x, img/photo-1-tablet@2x.png 2x">
-              <img class="post__photo-image" src="img/photo-1-mobile.png" width="100%" height="100%" srcset="img/photo-1-mobile@2x.png 2x" alt="Фотография">
-            </picture>
+            <div class="post__picture">
+              <a href="img/photo-1-desktop.jpg">
+                <picture class="post__photo">
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-1-tablet.png 1x, img/photo-1-tablet@2x.png 2x">
+                  <img class="post__photo-image" src="img/photo-1-mobile.png" width="100%" height="100%" srcset="img/photo-1-mobile@2x.png 2x" alt="Фотография">
+                </picture>
+              </a>
+            </div>
             <div class="post__information post__information-autor">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Левон</h4>
@@ -113,11 +117,15 @@
             </div>
           </div>
           <div class="post post__box post__box-autor">
-            <picture class="post__photo">
-              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-2-tablet.png 1x, img/photo-2-tablet@2x.png 2x">
-              <img class="post__photo-image" src="img/photo-2-mobile.png" width="100%" height="100%" srcset="img/photo-2-mobile@2x.png 2x" alt="Фотография">
-            </picture>
+            <div class="post__picture">
+              <a href="img/photo-2-desktop.jpg">
+                <picture class="post__photo">
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-2-tablet.png 1x, img/photo-2-tablet@2x.png 2x">
+                  <img class="post__photo-image" src="img/photo-2-mobile.png" width="100%" height="100%" srcset="img/photo-2-mobile@2x.png 2x" alt="Фотография">
+                </picture>
+              </a>
+            </div>
             <div class="post__information post__information-autor">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Антон</h4>
@@ -136,11 +144,15 @@
             </div>
           </div>
           <div class="post post__box post__box-autor">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-3-tablet.png 1x, img/photo-3-tablet1@2x.png 2x">
-              <img class="post__photo-image" src="img/photo-3-mobile.png" width="100%" height="100%" srcset="img/photo-3-mobile@2x.png 2x" alt="Фотография">
-            </picture>
+            <div class="post__picture">
+              <a href="img/photo-3-desktop.jpg">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-3-tablet.png 1x, img/photo-3-tablet1@2x.png 2x">
+                  <img class="post__photo-image" src="img/photo-3-mobile.png" width="100%" height="100%" srcset="img/photo-3-mobile@2x.png 2x" alt="Фотография">
+                </picture>
+              </a>
+            </div>
             <div class="post__information post__information-autor">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Борис</h4>
@@ -161,11 +173,15 @@
             </div>
           </div>
           <div class="post post__box post__box-autor">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-4-tablet.png 1x, img/photo-4-tablet1@2x.png 2x">
-              <img class="post__photo-image" src="img/photo-4-mobile.png" width="100%" height="100%" srcset="img/photo-4-mobile@2x.png 2x" alt="Фотография">
-            </picture>
+            <div class="post__picture">
+              <a href="img/photo-4-desktop.jpg">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-4-tablet.png 1x, img/photo-4-tablet1@2x.png 2x">
+                  <img class="post__photo-image" src="img/photo-4-mobile.png" width="100%" height="100%" srcset="img/photo-4-mobile@2x.png 2x" alt="Фотография">
+                </picture>
+              </a>
+            </div>
             <div class="post__information post__information-autor">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Сергей</h4>
@@ -184,11 +200,15 @@
             </div>
           </div>
           <div class="post post__box post__box-autor">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-5-tablet.png 1x, img/photo-5-tablet1@2x.png 2x">
-              <img class="post__photo-image" src="img/photo-5-mobile.png" width="100%" height="100%" srcset="img/photo-5-mobile@2x.png 2x" alt="Фотография">
-            </picture>
+            <div class="post__picture">
+              <a href="img/photo-5-desktop.jpg">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-5-tablet.png 1x, img/photo-5-tablet1@2x.png 2x">
+                  <img class="post__photo-image" src="img/photo-5-mobile.png" width="100%" height="100%" srcset="img/photo-5-mobile@2x.png 2x" alt="Фотография">
+                </picture>
+              </a>
+            </div>
             <div class="post__information post__information-autor">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Максим</h4>
@@ -207,11 +227,15 @@
             </div>
           </div>
           <div class="post post__box post__box-autor">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-6-tablet.png 1x, img/photo-6-tablet1@2x.png 2x">
-              <img class="post__photo-image" src="img/photo-6-mobile.png" width="100%" height="100%" srcset="img/photo-6-mobile@2x.png 2x" alt="Фотография">
-            </picture>
+            <div class="post__picture">
+              <a href="img/photo-6-desktop.jpg">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-6-tablet.png 1x, img/photo-6-tablet1@2x.png 2x">
+                  <img class="post__photo-image" src="img/photo-6-mobile.png" width="100%" height="100%" srcset="img/photo-6-mobile@2x.png 2x" alt="Фотография">
+                </picture>
+              </a>
+            </div>
             <div class="post__information post__information-autor">
               <div class="post__autor autor">
                 <h4 class="autor__post-name">Надежда</h4>
@@ -233,7 +257,7 @@
         <article class="filter">
           <h4 class="filter__legend user__legend user__legend-filter">Затмите их всех!</h4>
           <p class="filter__legend user__legend-text">Выкладывайте все, что накопилось в телефоне!</p>
-          <div class="filter__container">
+          <form class="filter__container filter__catalog-form" action="https://echo.htmlacademy.ru/courses" method="post">
             <div class="filter__box filter__box-photo">
               <picture>
                 <source media="(min-width: 660px)" srcset="img/photo-7-tablet.png 1x, img/photo-7-tablet@2x.png 2x">
@@ -244,15 +268,27 @@
               <div class="filter__icon icon">
                 <span class="icon__box">
                   <button class="icon__toggle icon__toggle--current" type="button"></button>
-                  <input class="icon__range icon__range-crop" type="range" value="86" min="0" max="100">
+                  <input class="icon__range icon__range-crop" type="range" value="50" min="0" max="100">
+                  <div class="icon__range-box icon__range-crop range-box">
+                    <div class="range-box__scale"></div>
+                    <div class="range-box__toggle"></div>
+                  </div>
                 </span>
                 <span class="icon__box">
                   <button class="icon__toggle icon__box-second" type="button"></button>
-                  <input class="icon__range icon__range-fill icon__hidden" value="13" type="range" min="0" max="100">
+                  <input class="icon__range icon__range-fill icon__hidden" value="50" type="range" min="0" max="100">
+                  <div class="icon__range-box range-box icon__range-fill icon__hidden range-box__hidden">
+                    <div class="range-box__scale"></div>
+                    <div class="range-box__toggle"></div>
+                  </div>
                 </span>
                 <span class="icon__box">
                   <button class="icon__toggle" type="button"></button>
-                  <input class="icon__range icon__range-contrast icon__hidden" value="51" type="range" min="0" max="100">
+                  <input class="icon__range icon__range-contrast icon__hidden" value="50" type="range" min="0" max="100">
+                  <div class="icon__range-box range-box icon__hidden icon__range-contrast range-box__hidden">
+                    <div class="range-box__scale"></div>
+                    <div class="range-box__toggle"></div>
+                  </div>
                 </span>
               </div>
               <div class="filter__button button">
@@ -260,7 +296,7 @@
                 <button class="button__repeal button-post repeal" type="button">Отмена</button>
               </div>
             </div>
-          </div>
+          </form>
         </article>
       </section>
     </main>

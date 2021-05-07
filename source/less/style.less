@@ -48,6 +48,7 @@
 @import "blocks/filter.less";
 @import "blocks/clock.less";
 @import "blocks/slider.less";
+@import "blocks/range-box.less";
 
 @media (min-width: @mobile-width-only) {
   .main-nav--closed .main-nav__dropdown::before {
@@ -758,6 +759,7 @@
 
   .filter__block {
     width: 300px;
+    height: 404px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -905,11 +907,13 @@
   .user__legend {
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 77px;
     padding: 91px 50px 0 50px;
   }
 
   .user__legend-filter {
     padding-top: 0;
+    margin: 0;
   }
 
   .filter {
@@ -1237,7 +1241,7 @@
   }
 
   .icon__range {
-    display: inline-block;
+    display: none;
     width: 202px;
     top: 8px;
     box-sizing: border-box;
@@ -1466,6 +1470,48 @@
 
   .post__photo-image {
     width: 100%;
+  }
+
+  .catalog__form {
+    display: flex;
+  }
+
+  .range-box {
+    top: 0;
+  }
+
+  .post__picture {
+    padding: 0;
+  }
+
+  .range-box__hidden {
+    display: block;
+  }
+
+  .icon__range-box {
+    width: 202px;
+    top: -5px;
+    left: 51px;
+  }
+
+  .icon__range-crop .range-box__toggle {
+    left: 96px;
+  }
+
+  .icon__range-fill {
+    top: -6px;
+
+    .range-box__toggle {
+      left: 96px;
+    }
+  }
+
+  .icon__range-contrast {
+    top: -8px;
+
+    .range-box__toggle {
+      left: 96px;
+    }
   }
 }
 
@@ -2235,8 +2281,7 @@
 
   .filter__container {
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 57px 0 53px 25px;
+    padding: 57px 55px 53px 80px;
     margin: 0 130px;
   }
 
@@ -2276,6 +2321,7 @@
   }
 
   .icon__range {
+    display: none;
     width: 288px;
     left: 92px;
   }
@@ -2501,5 +2547,77 @@
 
   .site-list__desktop {
     text-transform: capitalize;
+  }
+
+  .site-list__item--active {
+    position: relative;
+
+    &::after {
+      width: 100%;
+      height: 50px;
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid white;
+      left: 0;
+      bottom: -5px;
+    }
+  }
+
+  .range-box {
+    position: absolute;
+    height: 15px;
+    width: 288px;
+    left: 94px;
+    background-color: transparent;
+    border-radius: 5px;
+    padding-top: 15px;
+    z-index: 50;
+  }
+
+  .range-box__scale {
+    height: 2px;
+    background: @dark-blue;
+  }
+
+  .range-box__toggle {
+    position: absolute;
+    top: 5px;
+    left: 110px;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 2px solid @pink;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .icon__range-box {
+    width: 288px;
+    top: 5px;
+    left: 94px;
+  }
+
+  .icon__range-crop .range-box__toggle {
+    left: 130px;
+    top: 9px;
+  }
+
+  .icon__range-fill {
+    top: 5px;
+    left: 92px;
+
+    .range-box__toggle {
+      top: 9px;
+      left: 130px;
+    }
+  }
+
+  .icon__range-contrast {
+    top: -1px;
+
+    .range-box__toggle {
+      top: 9px;
+      left: 130px;
+    }
   }
 }
