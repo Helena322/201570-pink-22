@@ -17,11 +17,34 @@
   line-height: 18px;
   text-decoration: none;
   margin: 0 auto;
+
+  &:hover {
+    color: white;
+    background: @pink;
+  }
+
+  &:active {
+    color: @white-translucent;
+    background: @pink;
+  }
 }
 
 .button__repeal {
   color: @light-border;
   border: @light-border solid 3px;
+
+  &:hover {
+    color: @dark-blue;
+    border: @dark-blue solid 3px;
+    background-color: white;
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: @white-translucent;
+    border: @dark-blue solid 3px;
+    background-color: @dark-blue;
+  }
 }
 
 .button__send {

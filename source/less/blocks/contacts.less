@@ -74,6 +74,16 @@
   margin: 0 auto;
   padding-left: 20px;
   box-sizing: border-box;
+
+  &:hover {
+    border: 2px solid black;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @pink;
+    outline: none;
+  }
 }
 
 .contacts__input::placeholder {
@@ -103,4 +113,9 @@
   padding: 0;
   box-sizing: border-box;
   z-index: -5;
+}
+
+.contacts__mail:hover {
+  color: @dark-blue;
+  text-decoration: underline;
 }

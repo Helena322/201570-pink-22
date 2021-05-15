@@ -13,19 +13,6 @@
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: top center;
-
-  &:nth-child(1) {
-    background-image: url("../../img/crop.svg");
-  }
-
-  &:nth-child(2) {
-    background-image: url("../../img/fill.svg");
-  }
-
-  &:nth-child(3) {
-    height: 34px;
-    background-image: url("../../img/contrast.svg");
-  }
 }
 
 .icon__range {
@@ -60,4 +47,28 @@
 
 .icon__hidden {
   display: none;
+}
+
+.icon__fill path,
+.icon__contrast path {
+  fill: @dark-border;
+}
+
+.icon__crop:hover path,
+.icon__fill:hover path,
+.icon__contrast:hover path {
+  fill: @border;
+}
+
+.icon__crop:active path,
+.icon__fill:active path,
+.icon__contrast:active path {
+  fill: @dark-border;
+}
+
+.icon__crop:focus path,
+.icon__fill:focus path,
+.icon__contrast:focus path {
+  fill: @pink;
+  opacity: 1;
 }

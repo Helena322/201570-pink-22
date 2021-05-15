@@ -26,6 +26,16 @@
   font-size: 18px;
   line-height: 30px;
   padding-left: 15px;
+
+  &:hover {
+    border: 2px solid black;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @pink;
+    outline: none;
+  }
 }
 
 .name__input::placeholder {
