@@ -47,9 +47,16 @@
   border: none;
   outline: none;
 
-  &:focus,
-  &:visited,
+  &:hover {
+    opacity: 0.6;
+  }
+
   &:active {
+    background-image: url("../../img/slider.svg");
+    opacity: 0.1;
+  }
+
+  &:visited {
     width: 12px;
     height: 12px;
     background-image: url("../../img/current-slider.svg");

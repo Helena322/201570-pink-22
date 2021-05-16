@@ -63,3 +63,16 @@
   background-position: center;
   z-index: 10;
 }
+
+.checkbox__input + .checkbox__label:hover::before {
+  border: 2px solid black;
+  border-radius: 1px;
+  outline: none;
+}
+
+.checkbox__input + .checkbox__label:active::before,
+.checkbox__input + .checkbox__label:focus::before {
+  border: 2px solid @pink;
+  border-radius: 1px;
+  outline: none;
+}
