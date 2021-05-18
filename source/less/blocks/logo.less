@@ -1,0 +1,35 @@
+@media (min-width: @mobile-width-only) {
+  .logo__desktop {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-tablet-width) {
+  .logo__mobile-tablet:hover path {
+    fill: @pink;
+  }
+
+  .logo__mobile-tablet:active path {
+    fill: @pink;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__mobile-tablet {
+    display: none;
+  }
+
+  .logo__desktop {
+    display: block;
+  }
+
+  .logo__desktop:hover path {
+    fill: @pink;
+  }
+
+  .logo__desktop:active path {
+    fill: @pink;
+    opacity: 0.3;
+  }
+}

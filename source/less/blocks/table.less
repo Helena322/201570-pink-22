@@ -1,4 +1,4 @@
-.table__block {
+.table-block {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -69,5 +69,57 @@
 
   &:nth-child(2) {
     margin: 0 13px;
+  }
+}
+
+@media (min-width: @mobile-width-only) {
+  .table-block {
+    overflow: hidden;
+
+    &::after {
+      overflow: visible;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .table__rates::before,
+  .table__rates::after {
+    display: none;
+  }
+
+  .table__rates {
+    width: 624px;
+    margin-bottom: 67px;
+  }
+
+  .table__button {
+    display: none;
+  }
+
+  .table-block {
+    padding: 0 20px;
+
+    &::after {
+      height: 400px;
+      background-image: url("../../img/grey-background-tablet.svg");
+      top: -110px;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table__button {
+    display: none;
+  }
+
+  .table-block {
+    padding: 0 130px;
+  }
+
+  .table__rates {
+    width: 946px;
+    margin-bottom: 92px;
   }
 }

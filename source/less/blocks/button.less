@@ -29,7 +29,16 @@
   }
 }
 
+.button__catalog-send {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+}
+
 .button__repeal {
+  font-family: "Open Sans", sans-serif;
   color: @light-border;
   border: @light-border solid 3px;
 
@@ -48,5 +57,37 @@
 }
 
 .button__send {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .button__send {
+    margin: 0 0 25px;
+  }
+
+  .button__repeal {
+    margin: 0 0 5px;
+  }
+
+  .button-post {
+    width: 258px;
+    height: 55px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button-post {
+    width: 183px;
+    height: 55px;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+
+  .button__send {
+    margin-right: 41px;
+  }
+
+  .button__repeal {
+    margin: 0 0 0 3px;
+  }
 }

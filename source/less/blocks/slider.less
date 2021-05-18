@@ -6,10 +6,31 @@
   outline: none;
 }
 
-.slider__toggle-image:hover path {
+.slider-toggle-image:hover path {
   opacity: 1;
 }
 
-.slider__toggle-image:active path {
+.slider-toggle-image:active path {
   opacity: 0.1;
+}
+
+@media (min-width: @mobile-width-only) {
+  .slider-toggle-left,
+  .slider-toggle-right {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider-toggle-left {
+    position: absolute;
+    top: 72px;
+    left: -19px;
+  }
+
+  .slider-toggle-right {
+    position: absolute;
+    top: 72px;
+    right: 17px;
+  }
 }
