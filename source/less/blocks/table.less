@@ -41,34 +41,49 @@
 }
 
 .table__slider-toggle {
+  position: relative;
   width: 6px;
   height: 6px;
   background-color: transparent;
-  background-image: url("../../img/slider.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   outline: none;
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    background-image: url("../../img/slider.svg");
-    opacity: 0.1;
-  }
-
-  &:visited {
-    width: 12px;
-    height: 12px;
-    background-image: url("../../img/current-slider.svg");
-    border: none;
-    outline: none;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    left: 0;
+    top: 0;
+    border: 3px solid @light-gray;
+    border-radius: 50%;
+    background-color: @dark-blue;
+    opacity: 0.3;
+    z-index: 5;
   }
 
   &:nth-child(2) {
     margin: 0 13px;
+  }
+}
+
+.table__slider-toggle:hover {
+  &::before {
+    width: 6px;
+    height: 6px;
+    opacity: 0.6;
+    outline: none;
+  }
+}
+
+.table__slider-toggle:active {
+  &::before {
+    width: 6px;
+    height: 6px;
+    opacity: 0.1;
+    outline: none;
   }
 }
 
