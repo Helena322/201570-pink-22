@@ -15,3 +15,79 @@
   height: 23px;
   background: no-repeat;
 }
+
+@media (min-width: @mobile-width-only) {
+  .page-header__logo-desktop,
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-mobile:hover path {
+    fill: @pink;
+  }
+
+  .page-header__logo-mobile:focus path,
+  .page-header__logo-mobile:active path {
+    fill: white;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    position: absolute;
+    top: 27px;
+    left: 20px;
+    width: 145px;
+    height: 40px;
+    background-repeat: no-repeat;
+  }
+
+  .page-header__logo-desktop,
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__logo-tablet:hover path {
+    fill: @pink;
+  }
+
+  .page-header__logo-tablet:focus path,
+  .page-header__logo-tablet:active path {
+    fill: white;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    position: relative;
+    top: -8px;
+    width: 150px;
+    height: 40px;
+    background-repeat: no-repeat;
+  }
+
+  .page-header__logo-mobile,
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desktop {
+    display: block;
+  }
+
+  .page-header__logo-desktop:hover path {
+    fill: @pink;
+  }
+
+  .page-header__logo-desktop:focus path,
+  .page-header__logo-desktop:active path {
+    fill: white;
+    opacity: 0.3;
+  }
+}

@@ -14,6 +14,7 @@
   font-size: 30px;
   line-height: 36px;
   align-items: center;
+  color: black;
   padding-right: 60px;
   margin: 0 0 10px 0;
 }
@@ -32,4 +33,82 @@
   line-height: 24px;
   align-items: center;
   text-decoration-line: underline;
+}
+
+@media (min-width: @mobile-width-only) {
+  .clock,
+  .clock__tablet,
+  .clock__desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .clock__mobile {
+    display: none;
+  }
+
+  .clock__tablet {
+    display: block;
+  }
+
+  .clock__block {
+    padding-top: 72px;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .clock__title {
+    font-weight: bold;
+    padding-right: 150px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .clock {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    background-color: @light-gray;
+    padding: 11px 130px 60px 130px;
+  }
+
+  .clock__img {
+    background-image: url("../../img/24-desktop.svg");
+    background-position: left top;
+  }
+
+  .clock__block {
+    padding-top: 94px;
+  }
+
+  .clock__title {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    padding-right: 150px;
+  }
+
+  .clock__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .clock__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .clock__tablet {
+    display: none;
+  }
+
+  .clock__desktop {
+    display: block;
+  }
 }

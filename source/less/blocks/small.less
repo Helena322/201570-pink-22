@@ -1,8 +1,8 @@
-.small__block {
+.small-block {
   text-align: center;
 }
 
-.small__text {
+.small-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
@@ -10,10 +10,32 @@
   text-transform: uppercase;
 }
 
-.small__star {
+.small-star {
   color: @pink;
 }
 
-.small__text-desktop {
+.small-text-desktop {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .small-block {
+    padding-top: 17px;
+    text-align: right;
+  }
+
+  .small-text {
+    margin-right: -1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .small-block {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .small-text-desktop {
+    display: inline;
+  }
 }
