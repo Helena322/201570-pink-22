@@ -290,24 +290,25 @@
   .contacts__container {
     display: grid;
     gap: 50px;
-    grid-template-columns: 260px 280px 260px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "call guest letter";
     padding: 40px 130px 0 150px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
 
   .call {
     grid-area: call;
-    left: 0;
+    left: -7px;
   }
 
   .letter {
     grid-area: letter;
-    left: 0;
+    left: -14px;
   }
 
   .guest {
     grid-area: guest;
+    left: -11px;
   }
 
   .contacts-user {

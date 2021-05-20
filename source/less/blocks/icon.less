@@ -55,9 +55,9 @@
 }
 
 @media (min-width: @mobile-width-only) {
-  .icon--crop__small,
-  .icon--contrast__small,
-  .icon--fill__small {
+  .icon__crop--small,
+  .icon__contrast--small,
+  .icon__fill--small {
     display: none;
   }
 }
@@ -118,27 +118,27 @@
     }
   }
 
-  .icon--crop__normal,
-  .icon--contrast__normal,
-  .icon--fill__normal {
+  .icon__crop--normal,
+  .icon__contrast--normal,
+  .icon__fill--normal {
     display: none;
   }
 
-  .icon--crop__small,
-  .icon--contrast__small,
-  .icon--fill__small {
+  .icon__crop--small,
+  .icon__contrast--small,
+  .icon__fill--small {
     display: block;
   }
 
-  .icon--contrast__small path,
-  .icon--fill__small path {
+  .icon__contrast--small path,
+  .icon__fill--small path {
     fill: @pink;
   }
 
-  .icon--contrast__small:active path,
-  .icon--fill__small:active path,
-  .icon--contrast__small:hover path,
-  .icon--fill__small:hover path {
+  .icon__contrast--small:active path,
+  .icon__fill--small:active path,
+  .icon__contrast--small:hover path,
+  .icon__fill--small:hover path {
     fill: @pink;
   }
 }
@@ -199,29 +199,29 @@
     }
   }
 
-  .icon--crop__small,
-  .icon--contrast__small,
-  .icon--fill__small {
+  .icon__crop--small,
+  .icon__contrast--small,
+  .icon__fill--small {
     display: none;
   }
 
-  .icon--crop__normal {
+  .icon__crop--normal {
     display: block;
     margin: -6px 0 0 0;
   }
 
-  .icon--contrast__normal {
+  .icon__contrast--normal {
     display: block;
     margin: 18px 0 0 3px;
   }
 
-  .icon--fill__normal {
+  .icon__fill--normal {
     display: block;
     margin: 4px 0 0 0;
   }
 
-  .icon--contrast__normal path,
-  .icon--fill__normal path {
+  .icon__contrast--normal path,
+  .icon__fill--normal path {
     fill: @pink;
   }
 
@@ -233,5 +233,17 @@
   .icon__contrast:active path {
     fill: @pink;
     opacity: 1;
+  }
+
+  .icon__range-fill .range-box__toggle {
+    left: 36px;
+  }
+
+  .icon__range-crop .range-box__toggle {
+    left: 234px;
+  }
+
+  .icon__range-contrast .range-box__toggle {
+    left: 137px;
   }
 }
