@@ -4,10 +4,18 @@
   text-decoration: none;
   justify-content: center;
   align-items: center;
+}
 
-  &:hover,
-  &:active {
-    color: @dark-blue;
+.copyright__link:hover .copyright__img {
+  path {
+    fill: @dark-blue;
+  }
+}
+
+.copyright__link:active .copyright__img {
+  path {
+    fill: @dark-blue;
+    opacity: 0.3;
   }
 }
 
@@ -18,15 +26,6 @@
   line-height: 18px;
   margin: 0;
   padding: 0 15px 0 0;
-}
-
-.copyright__img:hover path {
-  fill: @dark-blue;
-}
-
-.copyright__img:active path {
-  fill: @dark-blue;
-  opacity: 0.3;
 }
 
 @media (min-width: @desktop-width) {
