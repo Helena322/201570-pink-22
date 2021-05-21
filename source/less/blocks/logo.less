@@ -5,12 +5,12 @@
 }
 
 @media (max-width: @mobile-tablet-width) {
-  .logo__mobile-tablet:hover path {
+  .logo__mobile-tablet:hover {
     fill: @pink;
   }
 
-  .logo__mobile-tablet:active path {
-    fill: @pink;
+  .logo__mobile-tablet:active {
+    fill: @dark-blue;
     opacity: 0.3;
   }
 }
@@ -24,12 +24,16 @@
     display: block;
   }
 
-  .logo__desktop:hover path {
+  .logo__desktop {
+    fill: @dark-blue;
+  }
+
+  .logo__desktop:hover {
     fill: @pink;
   }
 
-  .logo__desktop:active path {
-    fill: @pink;
+  .logo__desktop:active {
+    fill: @dark-blue;
     opacity: 0.3;
   }
 }
