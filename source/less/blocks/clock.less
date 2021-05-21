@@ -2,7 +2,7 @@
   min-height: 350px;
 }
 
-.clock__img {
+.clock-img {
   text-align: center;
   background-image: url("../../img/24-tablet.svg");
   background-repeat: no-repeat;
@@ -33,6 +33,18 @@
   line-height: 24px;
   align-items: center;
   text-decoration-line: underline;
+
+  &:hover {
+    color: @dark-blue;
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:active {
+    color: @dark-blue;
+    text-decoration: none;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @mobile-width-only) {
@@ -44,51 +56,67 @@
 }
 
 @media (min-width: @tablet-width) {
-  .clock__mobile {
-    display: none;
-  }
-
   .clock__tablet {
     display: block;
+    text-align: start;
   }
 
   .clock__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding-top: 72px;
+    margin-left: 330px;
+    margin-right: 0;
   }
 
   .clock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
+    max-width: 660px;
+    margin: 0 auto;
   }
 
   .clock__title {
     font-weight: bold;
-    padding-right: 150px;
+    text-align: start;
+    padding-left: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .clock {
-    display: grid;
-    grid-template-columns: 370px 1fr;
     background-color: @light-gray;
-    padding: 11px 130px 60px 130px;
+    min-height: 422px;
   }
 
-  .clock__img {
-    background-image: url("../../img/24-desktop.svg");
-    background-position: left top;
+  .clock-img {
+    display: flex;
+    max-width: 100%;
+    background-image: none;
+
+    &::before {
+      content: "";
+      width: 855px;
+      height: 360px;
+      background-image: url("../../img/24-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: right 71px top 11px;
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 
   .clock__block {
-    padding-top: 94px;
+    max-width: 1200px;
+    padding: 106px 0 0;
+    margin: 0 auto;
   }
 
   .clock__title {
     font-size: 30px;
     line-height: 30px;
     font-weight: bold;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
     padding-right: 150px;
   }
 
@@ -110,5 +138,6 @@
 
   .clock__desktop {
     display: block;
+    text-align: start;
   }
 }

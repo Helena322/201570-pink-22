@@ -30,7 +30,7 @@
 .reviews__slider {
   display: flex;
   justify-content: center;
-  height: 12px;
+  height: 6px;
   align-items: center;
   text-align: center;
   border: none;
@@ -178,6 +178,7 @@
 
   .reviews__wrapper {
     padding-top: 57px;
+    padding-bottom: 64px;
   }
 }
 
@@ -187,10 +188,10 @@
     background-repeat: no-repeat;
     background-position: top 73px center;
     padding: 142px 130px 0 130px;
-    margin-bottom: 95px;
+    margin-bottom: 88px;
 
     &::after {
-      height: 234px;
+      height: 242px;
       background-image: url("../../img/grey-background-desktop.svg");
       bottom: -174px;
     }
@@ -228,5 +229,17 @@
 
   .reviews__slider-toggle::before {
     display: none;
+  }
+
+  .reviews__slider-toggle:focus .slider-toggle-image {
+    path {
+      opacity: 1;
+    }
+  }
+
+  .reviews__slider-toggle:active .slider-toggle-image {
+    path {
+      opacity: 0.1;
+    }
   }
 }
