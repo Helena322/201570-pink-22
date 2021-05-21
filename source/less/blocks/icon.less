@@ -60,6 +60,34 @@
   .icon__fill--small {
     display: none;
   }
+
+  .icon__crop--normal {
+    fill: @pink;
+  }
+
+  .icon__contrast--normal,
+  .icon__fill--normal {
+    fill: @dark-blue;
+    opacity: 0.3;
+  }
+
+  .icon__contrast--normal:hover,
+  .icon__fill--normal:hover {
+    fill: @dark-blue;
+    opacity: 0.5;
+  }
+
+  .icon__contrast--normal:active,
+  .icon__fill--normal:active {
+    fill: @pink;
+    opacity: 1;
+  }
+
+  .icon__toggle:focus .icon__contrast--normal,
+  .icon__toggle:focus .icon__fill--normal {
+    fill: @pink;
+    opacity: 1;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -128,17 +156,14 @@
   .icon__contrast--small,
   .icon__fill--small {
     display: block;
-  }
-
-  .icon__contrast--small path,
-  .icon__fill--small path {
     fill: @pink;
+    opacity: 1;
   }
 
-  .icon__contrast--small:active path,
-  .icon__fill--small:active path,
-  .icon__contrast--small:hover path,
-  .icon__fill--small:hover path {
+  .icon__contrast--small:active,
+  .icon__fill--small:active,
+  .icon__contrast--small:hover,
+  .icon__fill--small:hover {
     fill: @pink;
   }
 }
@@ -220,17 +245,24 @@
     margin: 4px 0 0 0;
   }
 
-  .icon__contrast--normal path,
-  .icon__fill--normal path {
+  .icon__contrast--normal,
+  .icon__fill--normal {
     fill: @pink;
   }
 
-  .icon__crop:hover path,
-  .icon__fill:hover path,
-  .icon__contrast:hover path,
-  .icon__crop:active path,
-  .icon__fill:active path,
-  .icon__contrast:active path {
+  .icon__crop:hover,
+  .icon__fill:hover,
+  .icon__contrast:hover,
+  .icon__crop:active,
+  .icon__fill:active,
+  .icon__contrast:active {
+    fill: @pink;
+    opacity: 1;
+  }
+
+  .icon__crop--normal,
+  .icon__fill--normal,
+  .icon__contrast--normal {
     fill: @pink;
     opacity: 1;
   }

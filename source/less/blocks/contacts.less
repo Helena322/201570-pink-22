@@ -26,6 +26,7 @@
 }
 
 .contacts__link {
+  display: block;
   color: @pink;
   font-weight: 300;
   font-size: 24px;
@@ -115,6 +116,20 @@
 }
 
 .contacts__mail {
+  &:hover {
+    color: @dark-blue;
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:active {
+    color: @dark-blue;
+    text-decoration: none;
+    opacity: 0.3;
+  }
+}
+
+.contacts__tel {
   &:hover {
     color: @dark-blue;
     text-decoration: underline;

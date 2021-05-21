@@ -33,7 +33,7 @@
 }
 
 .user__button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   min-width: 280px;
   min-height: 64px;
   color: white;
@@ -46,6 +46,15 @@
   line-height: 30px;
   align-items: center;
   text-transform: uppercase;
+
+  &:hover {
+    background: @background-button;
+  }
+
+  &:active,
+  &:focus {
+    color: @white-translucent;
+  }
 }
 
 .user-contacts__title {
@@ -126,7 +135,7 @@
   }
 
   .user-catalog-tablet {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

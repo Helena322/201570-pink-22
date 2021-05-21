@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   width: 274px;
-  height: 49px;
+  min-height: 49px;
   color: white;
   border: white solid 3px;
   border-radius: 29px;
@@ -204,8 +204,8 @@
   }
 
   .block-intro__button {
-    width: 294px;
-    height: 49px;
+    min-height: 49px;
+    min-width: 296px;
   }
 
   .block-intro__phone {
@@ -248,7 +248,7 @@
 
   .block-intro__link {
     margin-bottom: 66px;
-    padding: 0 40px 0 0;
+    padding: 0;
   }
 
   .block-intro__legend {
@@ -265,7 +265,10 @@
   }
 
   .block-intro__button {
-    height: 50px;
+    position: relative;
+    min-height: 50px;
+    min-width: 296px;
     font-size: 21px;
+    left: -20px;
   }
 }
